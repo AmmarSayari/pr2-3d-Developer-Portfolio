@@ -46,38 +46,38 @@ const ServiceCard = (
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>
-          introduction
-        </p>
-        <h2 className={styles.sectionHeadText}>
-          Overview.
-        </h2>
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>
+            introduction
+          </p>
+          <h2 className={styles.sectionHeadText}>
+            Overview.
+          </h2>
 
-      </motion.div>
+        </motion.div>
 
-      <motion.p
-        variants={fadeIn("","", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I,m skilled software developer 
-        with 3+ years of experience in 
-        developing web applications using 
-        React, Redux, Node.js, Express.js, MongoDB, 
-        PostgreSQL, and other modern technologies.
-        let's work together to bring your ideas to life!
-      </motion.p>
+        <motion.p
+          variants={fadeIn("","", 0.1, 1)}
+          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        >
+          I,m skilled software developer 
+          with 3+ years of experience in 
+          developing web applications using 
+          React, Redux, Node.js, Express.js, MongoDB, 
+          PostgreSQL, and other modern technologies.
+          let's work together to bring your ideas to life!
+        </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard 
-            key={service.title}
-            index={index}
-            {...service}
-          />
-        ))}
+        <div className="mt-20 flex flex-wrap gap-10">
+          {services.map((service, index) => (
+            <ServiceCard 
+              key={service.title}
+              index={index}
+              {...service}
+            />
+          ))}
 
-      </div>
+        </div>
     </>
   )
 }
