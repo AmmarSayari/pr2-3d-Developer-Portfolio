@@ -3,16 +3,25 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
+import memeem865 from "../assets/memeem-865.png";
+
 const Hero = () => {
+
+  const isMobile = window.innerWidth <= 900;
+
+  const imageWidth = isMobile ? 200 : 300;
+
   return (
     <section className={`relative w-full h-screen mx-auto `}>
         <div className={`${styles.paddingX} 
           absolute inset-0 top-[120px] max-w-7xl mx-auto
-          flex flex-row items-start gap-5
-        `}>
-          <div className="flex flex-col justify-center items-center mt-5">
+          flex flex-col sm:flex-row items-start gap-5
+        `}
+          
+        >
+          <div className=" flex-col justify-center items-center mt-5 sm:block hidden">
               <div
-                className="w-1 sm:h-80 h-40 rounded"
+                className="w-1 sm:h-80 h-40 rounded "
                 style={{
                   background: 'linear-gradient(to bottom, #1EBBD7, transparent)',
                 }}
@@ -28,10 +37,12 @@ const Hero = () => {
             <p className={`${styles.heroSubText}
               mt-2 text-white-100
             `}>
-              I develop web applications 
-              <br className="sm:block hidden"/> 
-              and websites
+              Full-stack developer with expertise in 
+              devoloping <br className="sm:block hidden"/> web applications and back-end systems.  
             </p>
+          </div>
+          <div className={`w-[${imageWidth}px] rounded-full overflow-hidden`}>
+            <img src={memeem865} alt="Ammar's Picture" className="w-full h-full" />
           </div>
         </div>
       

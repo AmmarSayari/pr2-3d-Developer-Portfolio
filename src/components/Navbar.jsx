@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import {styles} from '../styles';
 import { navLinks} from '../constants';
 import {menu,close} from '../assets';
+
+import logoA1 from '../assets/logoA1.png';
+
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
@@ -24,7 +27,7 @@ const Navbar = () => {
           }}  
         >
           <img 
-              src="src\assets\logoA1.png" 
+              src={logoA1} 
               alt="logo" 
               className="w-12 h-12 object-contain border-white border-2 rounded-full" 
           />
