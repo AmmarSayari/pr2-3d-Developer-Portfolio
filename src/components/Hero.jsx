@@ -13,7 +13,7 @@ const Hero = () => {
           absolute inset-0 top-[120px] max-w-7xl mx-auto
           flex flex-row items-start gap-5
         `}
-          
+
         >
           <div className="flex flex-col justify-center items-center mt-5 ">
               <div
@@ -23,6 +23,7 @@ const Hero = () => {
                 }}
               />
           </div>
+
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm &nbsp;
@@ -41,9 +42,9 @@ const Hero = () => {
           <div className="w-[290px] rounded-full overflow-hidden">
             <img src={memeem865} alt="Ammar's Picture" className="w-full h-full" />
           </div>
+          
+          <ComputersCanvas />
         </div>
-      
-      <ComputersCanvas />
       
       <div className="absolute xs:bottom-10 bottom-32
           w-full flex justify-center items-center"
