@@ -7,7 +7,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import backend from "./backend.png";
-import webdev from "./webdev.png";
+import webdev1 from "./webdev1.png";
 import javadev from "./javadev.png";
 import infotech from "./infotech.png";
 
@@ -42,7 +42,7 @@ export {
   web,
   javadev,
   infotech,
-  webdev,
+  webdev1,
   github,
   menu,
   close,

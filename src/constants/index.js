@@ -24,7 +24,7 @@ import {
     threejs,
     javadev,
     infotech,
-    webdev
+    webdev1
   } from "../assets";
   
   export const navLinks = [
@@ -45,7 +45,7 @@ import {
   const services = [
     {
       title: "Web Developer",
-      icon: webdev,
+      icon: webdev1,
     },
     {
       title: "Backend Developer",
