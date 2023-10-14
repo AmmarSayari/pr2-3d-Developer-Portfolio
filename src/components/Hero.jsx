@@ -7,19 +7,15 @@ import memeem865 from "../assets/memeem-865.png";
 
 const Hero = () => {
 
-  const isMobile = window.innerWidth <= 900;
-
-  const imageWidth = isMobile ? 200 : 300;
-
   return (
     <section className={`relative w-full h-screen mx-auto `}>
         <div className={`${styles.paddingX} 
           absolute inset-0 top-[120px] max-w-7xl mx-auto
-          flex flex-col sm:flex-row items-start gap-5
+          flex flex-row items-start gap-5
         `}
           
         >
-          <div className=" flex-col justify-center items-center mt-5 sm:block hidden">
+          <div className=" flex-col justify-center items-center mt-5 ">
               <div
                 className="w-1 sm:h-80 h-40 rounded "
                 style={{
@@ -41,7 +37,7 @@ const Hero = () => {
               devoloping <br className="sm:block hidden"/> web applications and back-end systems.  
             </p>
           </div>
-          <div className={`w-[${imageWidth}px] rounded-full overflow-hidden`}>
+          <div className="w-[290px] rounded-full overflow-hidden">
             <img src={memeem865} alt="Ammar's Picture" className="w-full h-full" />
           </div>
         </div>
