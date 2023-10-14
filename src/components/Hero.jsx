@@ -33,8 +33,9 @@ const Hero = () => {
             <p className={`${styles.heroSubText}
               mt-2 text-white-100
             `}>
-              Full-stack developer with expertise in 
-              devoloping <br className="sm:block hidden"/> web applications and back-end systems.  
+              Full-stack developer with expertise in devoloping 
+              <br className="sm:block hidden"/> 
+              web applications and back-end systems.  
             </p>
           </div>
           <div className="w-[290px] rounded-full overflow-hidden">
