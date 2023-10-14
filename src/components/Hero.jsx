@@ -7,6 +7,8 @@ import memeem865 from "../assets/memeem-865.png";
 
 const Hero = () => {
 
+  const isMobile = window.innerWidth < 500;
+
   return (
     <section className={`relative w-full h-screen mx-auto `}>
         <div className={`${styles.paddingX} 
@@ -43,7 +45,10 @@ const Hero = () => {
             <img src={memeem865} alt="Ammar's Picture" className="w-full h-full" />
           </div>
           
-          <ComputersCanvas />
+          {!isMobile && (
+        
+            <ComputersCanvas />
+          )}
         </div>
       
       <div className="absolute xs:bottom-10 bottom-32
