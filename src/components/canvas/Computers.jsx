@@ -1,6 +1,7 @@
 import {Suspense, useEffect, useState} from 'react';
 import { Canvas, events } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import React, { Fragment } from 'react';
 
 import CanvasLoader from "../Loader";
 
@@ -22,7 +23,7 @@ const Computers = ({isMobile}) => {
         <primitive 
           object={computer.scene} 
           scale={isMobile ? 0.5 : 0.75}
-          position={isMobile ? [0,-3,-2.2] : [0, -3.25, -1.3]}
+          position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
           rotation={[-0.01, -0.2, -0.1]}
         />
       </mesh>
@@ -70,12 +71,26 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        {!isMobile && (
+          <Fragment>
+            {render3DModel()}
+          </Fragment>
+        )}
       </Suspense>
 
       <Preload all />
     </Canvas>
   )
-}
+
+  function render3DModel() {
+    try {
+      return <Computers isMobile={isMobile} />;
+    } catch (error) {
+      console.error("Error loading 3D model:", error);
+      return null; 
+    }
+  }
+
+};
 export default ComputersCanvas
 
