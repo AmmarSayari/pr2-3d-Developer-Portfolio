@@ -61,6 +61,37 @@ import {
     }
   ];
   
+
+  const relaventCourses = [
+    {
+      title: "Software Engineering",
+    },
+    {
+      title: "Web Development",
+    },
+    {
+      title: "Discrete Structure",
+    },
+    {
+      title: "Database Management Systems",
+    },
+    {
+      title: "Network Administration",
+    },
+    {
+      title: "Information security",
+    },
+    {
+      title: "Operating Systems",
+    },
+    {
+      title: "Object Oriented Programming",
+    },
+    {
+      title: "Data Mining",
+    },
+  ];
+
   const technologies = [
     {
       name: "HTML 5",
@@ -264,4 +295,11 @@ import {
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { 
+    services, 
+    technologies, 
+    experiences, 
+    testimonials, 
+    projects, 
+    relaventCourses 
+  };
