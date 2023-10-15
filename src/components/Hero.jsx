@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-
-
 import memeem865 from "../assets/memeem-865.png";
-import { ComputersCanvas } from "./canvas";
+import { ComputersCanvas } from "./Canvas";
 
 const Hero = () => {
 
@@ -42,6 +40,8 @@ const Hero = () => {
           <div className="w-[290px] rounded-full overflow-hidden">
             <img src={memeem865} alt="Ammar's Picture" className="w-full h-full" />
           </div>
+
+          <ComputersCanvas />
         </div>
       
       <div className="absolute xs:bottom-10 bottom-32
