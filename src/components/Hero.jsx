@@ -4,6 +4,7 @@ import { styles } from "../styles";
 
 
 import memeem865 from "../assets/memeem-865.png";
+import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
 
@@ -14,17 +15,15 @@ const Hero = () => {
         <div className={`${styles.paddingX} 
           absolute inset-0 top-[120px] max-w-7xl mx-auto
           flex flex-col sm:flex-row items-start gap-5
-        `}
-
-        >
-<div className="justify-center items-center mt-5 hidden sm:flex">              <div
+        `}>
+          <div className="justify-center items-center mt-5 hidden sm:flex">              <div
                 className="w-1 sm:h-80 h-40 rounded "
                 style={{
                   background: 'linear-gradient(to bottom, #1EBBD7, transparent)',
                 }}
               />
           </div>
-
+          
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm &nbsp;
@@ -45,7 +44,6 @@ const Hero = () => {
           </div>
         </div>
       
-
       <div className="absolute xs:bottom-10 bottom-32
           w-full flex justify-center items-center"
       >
