@@ -7,13 +7,13 @@ import {
     html,
     css,
     reactjs,
-    redux,
     tailwind,
     nodejs,
-    mongodb,
     git,
-    figma,
-    docker,
+    php,
+    nextjs,
+    prisma,
+    mysql,
     meta,
     starbucks,
     tesla,
@@ -114,20 +114,12 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
       name: "Tailwind CSS",
       icon: tailwind,
     },
     {
       name: "Node JS",
       icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
     },
     {
       name: "Three JS",
@@ -138,12 +130,24 @@ import {
       icon: git,
     },
     {
-      name: "figma",
-      icon: figma,
+      name: "Java",
+      icon: javadev,
     },
     {
-      name: "docker",
-      icon: docker,
+      name: "PHP",
+      icon: php,
+    },
+    {
+      name: "Next JS",
+      icon: nextjs,
+    },
+    {
+      name: "Prisma DB",
+      icon: prisma,
+    },
+    {
+      name: "MySQL",
+      icon: mysql,
     },
   ];
   

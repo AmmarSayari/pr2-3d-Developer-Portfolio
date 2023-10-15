@@ -23,7 +23,7 @@ const Education = () => {
   
           </motion.div>
   
-          <motion.p
+          <motion.div
             variants={fadeIn("","", 0.1, 1)}
             className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
           >
@@ -35,7 +35,7 @@ const Education = () => {
             <div className="w-[290px] rounded-full overflow-hidden">
                 <img src={kau} alt="Ammar's Picture" className="w-full h-full" />
             </div>
-          </motion.p>
+          </motion.div>
 
           <div className="mt-20 flex flex-wrap gap-10">
             {relaventCourses.map((relaventCourse, index) => (
@@ -48,7 +48,7 @@ const Education = () => {
   
           </div>
 
-          <motion.p
+          <motion.div
             variants={fadeIn("","", 0.1, 1)}
             className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
           >
@@ -67,7 +67,7 @@ const Education = () => {
                 comprehensively learned about data structures, algorithms, 
                 and object-oriented principles.
             </div>
-          </motion.p>
+          </motion.div>
   
       </>
     )
