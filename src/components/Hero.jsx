@@ -6,7 +6,7 @@ import { ComputersCanvas } from "./Canvas";
 
 const Hero = () => {
 
-  
+  const isMobile = window.innerWidth < 640;
 
   return (
     <section className={`relative w-full h-screen mx-auto `}>
@@ -14,7 +14,8 @@ const Hero = () => {
           absolute inset-0 top-[120px] max-w-7xl mx-auto
           flex flex-col sm:flex-row items-start gap-5
         `}>
-          <div className="justify-center items-center mt-5 hidden sm:flex">              <div
+          <div className="justify-center items-center mt-5 hidden sm:flex">              
+          <div
                 className="w-1 sm:h-80 h-40 rounded "
                 style={{
                   background: 'linear-gradient(to bottom, #1EBBD7, transparent)',
@@ -41,7 +42,10 @@ const Hero = () => {
             <img src={memeem865} alt="Ammar's Picture" className="w-full h-full" />
           </div>
 
-          <ComputersCanvas />
+
+          {!isMobile && (
+            <ComputersCanvas />
+          )}
         </div>
       
       <div className="absolute xs:bottom-10 bottom-32

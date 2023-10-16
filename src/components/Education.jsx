@@ -36,7 +36,7 @@ const Education = () => {
                 <img src={kau} alt="Ammar's Picture" className="w-full h-full" />
             </div>
           </motion.div>
-
+          {/*
           <div className="mt-20 flex flex-wrap gap-10">
             {relaventCourses.map((relaventCourse, index) => (
               <ServiceCard 
@@ -47,7 +47,7 @@ const Education = () => {
             ))}
   
           </div>
-
+           */}
           <motion.div
             variants={fadeIn("","", 0.1, 1)}
             className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
