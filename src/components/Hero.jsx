@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import memeem865 from "../assets/memeem-865.png";
-import { ComputersCanvas } from "./Canvas";
+import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
 
