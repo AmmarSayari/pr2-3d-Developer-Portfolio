@@ -32,7 +32,7 @@ const About = () => {
           Abdulaziz University. My experience includes
           creating engaging web solutions using a
           comprehensive stack, including JavaScript, 
-          React, Redux, Node.js, ShadcnUI, PrismaDB, 
+          React, Node.js, ShadcnUI, PrismaDB, 
           and MySQL, alongside the development of Java 
           and PHP applications. Let's collaborate and 
           bring your ideas to life!
