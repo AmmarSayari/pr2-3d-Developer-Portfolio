@@ -103,16 +103,16 @@ const Works = () => {
            max-w-3xl leading-[30px]"
         >
           I have worked on a variety of projects, 
-          ranging from Web Development to back-end development. 
+          ranging from Web Development, App Development, to back-end development. 
           Below are a few of my projects.
-          i use React, Node, Express, MongoDB, and Firebase.
-          showing my skills and experience. with a focus on
-          user experience and responsive design.
+          i use React, Node, Nextjs, TypeScript, Java, MySql, Strip, etc.
+    
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
           links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          ability to solve complex problems, work with different technologies, 
+          frameworks, libraries
+          , and manage projects effectively.
         </motion.p>
       </div>
 

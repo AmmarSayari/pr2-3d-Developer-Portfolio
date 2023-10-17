@@ -235,20 +235,20 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Spare parts services platform",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Description: Platform for spare parts services, with ordering system and chat AI focusing on vehicles and mechanics.Technologies: Back-End: PHP, Node.js (API integration), Front-End: React.js (Web), Java (Android phone)Achievements: Coordinated multiple front-end interfaces (Web, Android phone), Back-end API communicate with the front using JSON",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "Java",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "PHP",
           color: "pink-text-gradient",
         },
       ],
@@ -256,45 +256,24 @@ import {
       source_code_link: "https://github.com/",
     },
     {
-      name: "Job IT",
+      name: "E-Commerce platform",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "Description: An all-in-one platform lets you create and manage multiple stores from a central admin dashboard, complete with API management for CRUD operations and comprehensive sales tracking. Technologies: Back-End: TypeScript, Next.js13, Prisma, PlanetScale, Stripe, ShadcnUI, Front-End: TypeScript, React.js, Tailwind CSS Achievements: Mastering the use of multiple technologies and frameworks in a single project while training with TypeScript and Next.js 13 by creating a real-world application.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "Next.js",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "Tailwind CSS",
           color: "pink-text-gradient",
         },
       ],
       image: jobit,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
       source_code_link: "https://github.com/",
     },
   ];
