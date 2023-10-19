@@ -37,7 +37,7 @@ const Stars = (props) => {
 const StarsCanvas = () => {
   return (
     <div className='w-full h-auto absolute inset-0 z-[-1]'>
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas camera={{ position: [ 1.5, 0, 1] }}>
         <Suspense fallback={<CanvasLoader />}>
           <Stars />
         </Suspense>

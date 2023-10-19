@@ -1,0 +1,8 @@
+<svg id="10015.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+	<linearGradient id="gradient">
+      <stop offset="5%" stop-color="#003f7a" />
+      <stop offset="95%" stop-color="#00a5c2" />
+    </linearGradient>
+	<path fill="url(#gradient)" d="M404.5,332Q346,424,235,432Q124,440,97.5,340Q71,240,118,174.5Q165,109,258.5,77.5Q352,46,407.5,143Q463,240,404.5,332Z" />
+</svg>
+

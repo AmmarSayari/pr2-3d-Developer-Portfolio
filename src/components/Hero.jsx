@@ -41,16 +41,7 @@ const Hero = () => {
             </p>
           </div>
           <ProfileImage />
-          {/* <ProfileImage />
-          <div className="w-[290px] rounded-full overflow-hidden">
-            <img src={memeem865} alt="Ammar's Picture" className="w-full h-full" />
-          </div>
-           */}
-           {/*}
-          {!isMobile && (
-            <ComputersCanvas />
-            )}
-          */}
+         
         </div>
       
       <div className="absolute xs:bottom-10 bottom-32
