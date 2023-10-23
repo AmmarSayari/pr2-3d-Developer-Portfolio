@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
+import { StarsCanvas } from "../components";
 
 
 const SectionWrapper = (Component, idName) => function HOC() {
@@ -18,6 +19,7 @@ const SectionWrapper = (Component, idName) => function HOC() {
             <span className="hash-span" id={idName} >
                 &nbsp;
             </span>
+            <StarsCanvas />
             <Component />
         </motion.section>
     )
