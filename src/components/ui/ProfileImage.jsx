@@ -7,16 +7,17 @@ import blob from "../../assets/blob.svg";
 
 const ProfileImage = () => {
 
+  const isMobile = window.innerWidth < 640;
   const divStyle = {
     borderRadius: '67% 33% 61% 39% / 47% 30% 70% 53%',
   };
   return (
     
-    <div className=" min-h-[550px] min-w-[200px] relative w-32">
+    <div className={`relative  w-32 ${isMobile ? 'min-h-[200px]' : 'min-h-[550px]'} min-w-[200px] `}>
 
-      <div className=" rounded-full absolute inset-0 " >
+      <div className=" rounded-full absolute inset-0  " >
         <img
-          src={melong}
+          src={isMobile ? memeem865 : melong}
           alt="Ammar's Picture"
           className="bg-gradient-to-b from-[#003f7a] to-[#00a5c2] w-full h-full rounded-lg object-cover" style={divStyle}
         />
