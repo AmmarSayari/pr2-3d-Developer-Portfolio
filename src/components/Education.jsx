@@ -36,6 +36,9 @@ const Education = () => {
             variants={fadeIn("","", 0.1, 1)}
             className="mt-6 text-secondary text-[17px] max-w-3xl leading-[30px]"
           >
+            <h3 className="text-white text-[25px] font-bold mb-3">
+              Overview.
+            </h3>
             <div>
                 As part of the Information Technology program at King 
                 Abdulaziz University, I gained a comprehensive 
