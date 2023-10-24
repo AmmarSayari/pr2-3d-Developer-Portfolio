@@ -1,9 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 import memeem865 from "../../assets/memeem-865.png";
 import melong from "../../assets/melong.png";
-import blob from "../../assets/blob.svg";
 
 const ProfileImage = () => {
 
