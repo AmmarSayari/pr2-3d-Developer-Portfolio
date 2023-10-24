@@ -85,9 +85,6 @@ import {
       title: "Operating Systems",
     },
     {
-      title: "Object Oriented Programming",
-    },
-    {
       title: "Data Mining",
     },
   ];
