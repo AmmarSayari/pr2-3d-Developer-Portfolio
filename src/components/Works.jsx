@@ -104,15 +104,13 @@ const Works = () => {
         >
           I have worked on a variety of projects, 
           ranging from Web Development, App Development, to back-end development. 
-          Below are a few of my projects.
           i use React, Node, Nextjs, TypeScript, Java, MySql, Strip, etc.
-    
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
+          It reflects my
           ability to solve complex problems, work with different technologies, 
           frameworks, libraries
           , and manage projects effectively.
+
+          Below are a few of my projects.
         </motion.p>
       </div>
 
