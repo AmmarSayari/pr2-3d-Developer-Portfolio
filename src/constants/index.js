@@ -24,7 +24,12 @@ import {
     threejs,
     javadev,
     infotech,
-    webdev1
+    webdev1,
+    backendm8gt,
+    frontweb,
+    andro,
+    storeadmin,
+    storefront,
   } from "../assets";
   
   export const navLinks = [
@@ -151,27 +156,6 @@ import {
   
   const projects = [
     {
-      name: "Spare parts services platform",
-      description:
-        "Description: Platform for spare parts services, with ordering system and chat AI focusing on vehicles and mechanics.Technologies: Back-End: PHP, Node.js (API integration), Front-End: React.js (Web), Java (Android phone)Achievements: Coordinated multiple front-end interfaces (Web, Android phone), Back-end API communicate with the front using JSON",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Java",
-          color: "green-text-gradient",
-        },
-        {
-          name: "PHP",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
-    },
-    {
       name: "E-Commerce platform",
       description:
         "Description: An all-in-one platform lets you create and manage multiple stores from a central admin dashboard, complete with API management for CRUD operations and comprehensive sales tracking. Technologies: Back-End: TypeScript, Next.js13, Prisma, PlanetScale, Stripe, ShadcnUI, Front-End: TypeScript, React.js, Tailwind CSS Achievements: Mastering the use of multiple technologies and frameworks in a single project while training with TypeScript and Next.js 13 by creating a real-world application.",
@@ -193,10 +177,144 @@ import {
       source_code_link: "https://github.com/",
     },
   ];
+
+
+  const projects2 = [
+      {
+        name: "E-Commerce platform",
+        apps: [
+          {
+            name: "Admin Dashboard (back-end)",
+            source_code_link: "https://github.com/AmmarSayari/ecommerce-admin",
+            live_preview_link: "https://ecommerce-admin-m9.vercel.app/",
+            images: [
+              {
+                image: storeadmin,
+              },
+            ],
+            technologies: [
+              {
+                techName: "TypeScript",
+              },
+              {
+                techName: "Next.js",
+              },
+              {
+                techName: "Prisma",
+              },
+              {
+                techName: "PlanetScale",
+              },
+              {
+                techName: "Stripe",
+              },
+              {
+                techName: "ShadcnUI",
+              },
+            ],
+          },
+          {
+            name: "Storefront (front-end)",
+            source_code_link: "https://github.com/AmmarSayari/pr-1ecommerce-store",
+            live_preview_link: "https://store-mr9.vercel.app/",
+            images: [{
+              image: storefront,
+            }],
+            technologies: [
+              {
+                techName: "TypeScript",
+              },
+              {
+                techName: "React.js",
+              },
+              {
+                techName: "Tailwind CSS",
+              },
+            ],
+          }
+        ],
+        description:
+        "An all-in-one platform lets you create and manage multiple stores from a central admin dashboard, complete with API management for CRUD operations and comprehensive sales tracking.",
+
+        achievements: 
+        " Mastering the use of multiple technologies and frameworks in a single project while training with TypeScript and Next.js 13 by creating a real-world application."
+        
+      },
+      {
+        name: "Spare parts services platform (Senior Project)",
+        apps: [
+          {
+            name: "Front-End (Web)",
+            source_code_link: "https://github.com/AmmarSayari/499-spare-parts-frontend",
+            live_preview_link: null,
+            images: [
+              {
+                image: frontweb,
+              },
+            ],
+            technologies: [
+              {
+                techName: "React.js",
+              },
+              {
+                techName: "Firebase",
+              }
+            ],
+          },
+          {
+            name: "Android App",
+            source_code_link: "https://github.com/AbdulazizAlghamdi24/499_AutoSparaPartsService",
+            live_preview_link: null,
+            images: [
+              {
+                image: andro,
+              }
+            ],
+            technologies: [
+              
+              {
+                techName: "Java",
+              },
+              {
+                techName: "Firebase",
+              },
+            ],
+          },
+          {
+            name: "Back-End",
+            source_code_link: "https://github.com/AmmarSayari/cpit499a/",
+            live_preview_link: null,
+            images: [
+              {
+                image: backendm8gt,
+              }
+            ],
+            technologies: [
+              
+              {
+                techName: "PHP",
+              },
+              {
+                techName: "Node.js",
+              },
+              {
+                techName: "MySQL",
+              }
+            ],
+          }
+        ],
+          description:
+            " Platform for spare parts services, with ordering system and chat AI focusing on vehicles and mechanics.",
+          
+          achievements: "Coordinated multiple front-end interfaces (Web, Android phone), Back-end API communicate with the front using JSON"
+        },
+      
+  ];
   
   export { 
     services, 
     technologies, 
     projects, 
-    relaventCourses 
+    relaventCourses,
+    projects2 
   };

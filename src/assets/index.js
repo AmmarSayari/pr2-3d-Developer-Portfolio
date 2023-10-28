@@ -38,6 +38,14 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 import kaubul from "./kaubul.jpg";
+import link from "./link.png";
+
+import backendm8gt from "./backendm8gt.jpg";
+import frontweb from "./frontweb.jpg";
+import andro from "./andro.jpg";
+
+import storefront from "./storefront.png";
+import storeadmin from "./storeadmin.png";
 
 export {
   logo,
@@ -75,4 +83,10 @@ export {
   php,
   prisma,
   kaubul,
+  link,
+  backendm8gt,
+  frontweb,
+  andro,
+  storefront,
+  storeadmin,
 };
