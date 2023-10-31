@@ -28,7 +28,7 @@ const ProjectCard2 = ({
             </div>
 
             <div
-              className='flex flex-col sm:flex-row w-full sm:min-w-[1000px]'
+              className='flex flex-col sm:flex-row w-full sm:min-w-[1000px] '
             >
               {apps.map((app, appIndex) => (
                   <Tilt
@@ -36,9 +36,9 @@ const ProjectCard2 = ({
                     max: 45,
                     scale: 1,
                     speed: 450,
-                  }} key={appIndex} className='relative mr-[30px] h-full w-[310px]'>
+                  }} key={appIndex} className='relative mr-[30px] mt-9 h-full w-[310px] custom-glass-white rounded-2xl'>
                       
-                      <div className="relative w-[300px] h-[230px] ">
+                      <div className="relative w-[310px] h-[230px] ">
                         <div className='absolute inset-0 flex justify-end 
                           m-3 card-img_hover gap-1'
                         >
@@ -72,13 +72,13 @@ const ProjectCard2 = ({
                             />
                           </div>
                         </div>
-                        <div className="mt-3">
+                        <div className=" ">
                           {app.images.map((image, imageIndex) => (
                                   <img
                                       key={imageIndex}
                                       src={image.image}
                                       alt={`Image ${imageIndex}`}
-                                      className=' rounded-2xl max-h-[230px] max-w-[300px] '
+                                      className=' rounded-2xl w-full object-cover object-left-top max-h-[230px] '
                                   />
                           ))}
                         </div>
@@ -90,11 +90,11 @@ const ProjectCard2 = ({
                         <div className="bg-tertiary rounded-[20px] px-3 py-1 flex justify-center flex-row">
                             <h3 className='text-white font-semibold text-[14px] mr-2 mt-2'>Tech:</h3>
                           <div className="flex flex-row gap-3 flex-wrap mt-2 mb-2">
-                            {app.technologies.map((tech) => (
+                            {app.technologies.map((tech, techIndex) => (
 
-                              <div className="rounded-full bg-[#fff3] min-w-[60px]">
+                              <div className="rounded-full bg-[#fff3] min-w-[60px]" key={techIndex}>
                                 <p className="text-white text-[12px] text-center " >
-                                  {tech.techName}
+                                  {tech.techName }
                                 </p>
                               </div>
                             ))}
@@ -109,9 +109,9 @@ const ProjectCard2 = ({
 
               <div className='mt-5 '>
                 <h3 className="font-bold" >Description:</h3>
-                <p className='text-secondary text-[14px] sm:w-[660px]'>{description}</p>
+                <p className='text-secondary text-[14px] w-full sm:w-[660px]'>{description}</p>
                 <h3 className="mt-3 font-bold" >Achievements:</h3>
-                <p className=' text-secondary text-[14px] sm:w-[660px]'>{achievements}</p>
+                <p className=' text-secondary text-[14px] w-full sm:w-[660px]'>{achievements}</p>
               </div>
           
             </div>

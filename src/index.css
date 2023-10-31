@@ -12,6 +12,11 @@
   background-position: center;
 }
 
+.custom-glass-white{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(26,58,124,1) 35%, rgba(25,128,147,1) 55%, rgba(12,170,198,1) 75%, rgba(11,213,209,1) 100%);
+}
+
 
 
 * {
