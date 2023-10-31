@@ -65,4 +65,4 @@ const Internship = () => {
     )
   }
   
-  export default SectionWrapper(Internship, "")
+  export default SectionWrapper(Internship, "internship")

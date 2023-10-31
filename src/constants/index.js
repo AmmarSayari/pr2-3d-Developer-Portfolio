@@ -38,8 +38,8 @@ import {
       title: "About",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "Projects",
+      title: "Projects",
     },
     {
       id: "contact",

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import {styles} from '../styles';
 import { navLinks} from '../constants';
-import {menu,close} from '../assets';
+import {menu,close, linkedin} from '../assets';
 
 import logoA1 from '../assets/logoA1.png';
 
@@ -18,29 +18,44 @@ const Navbar = () => {
         top-0 z-20 bg-primary `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link 
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}  
-        >
-          <img 
-              src={logoA1} 
-              alt="logo" 
-              className="w-12 h-12 object-contain border-white border-2 rounded-full" 
-          />
-          <p className="text-white text-[18px]
-              font-bold cursor-pointer flex"
+        <div className='flex flex-row gap-6'>
+          <Link 
+            to="/"
+            className="flex items-center gap-2"
+            onClick={() => {
+              setActive("");
+              window.scrollTo(0, 0);
+            }}  
           >
-            Ammar &nbsp;
-            <span className="sm:block hidden" >
-              Al-sayari
-            </span> 
-          </p>
-        </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10" >
+            <img 
+                src={logoA1} 
+                alt="logo" 
+                className="w-12 h-12 object-contain rounded-full" 
+            />
+            <p className="text-white text-[18px]
+                font-bold cursor-pointer flex"
+            >
+              Ammar &nbsp;
+              <span className="sm:block hidden" >
+                Al-sayari
+              </span> 
+            </p>
+          </Link>
+          <div
+            onClick={() => window.open("https://www.linkedin.com/in/%D8%B9%D9%85%D8%A7%D8%B1-%D8%A7%D9%84%D8%B5%D9%8A%D8%B9%D8%B1%D9%8A-50a5a0287/", "_blank")}
+            className='black-gradient w-[45px] h-[45px] rounded-full 
+              flex justify-center items-center cursor-pointer'
+          >
+            <img
+              src={linkedin}
+              alt='linked'
+              className='w-[60%] h-[60%] object-contain'
+            />
+          </div>
+        </div>
+
+        
+        <ul className="list-none hidden sm:flex flex-row gap-5" >
           {navLinks.map((link) => (
             <li
               key={link.id}
