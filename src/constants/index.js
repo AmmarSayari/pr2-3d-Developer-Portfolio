@@ -94,6 +94,24 @@ import {
     },
   ];
 
+  const internAreas = [
+    {
+      title: "Database Management",
+    },
+    {
+      title: "Networking",
+    },
+    {
+      title: "Technical Support",
+    },
+    {
+      title: "configuring and managing network devices",
+    },
+    {
+      title: "resolving connectivity issues",
+    },
+  ];
+
   const technologies = [
     {
       name: "HTML 5",
@@ -316,5 +334,6 @@ import {
     technologies, 
     projects, 
     relaventCourses,
-    projects2 
+    projects2 ,
+    internAreas,
   };

@@ -46,6 +46,7 @@ import andro from "./andro.jpg";
 
 import storefront from "./storefront.png";
 import storeadmin from "./storeadmin.png";
+import internPic from "./internPic.jpg";
 
 export {
   logo,
@@ -89,4 +90,5 @@ export {
   andro,
   storefront,
   storeadmin,
+  internPic,
 };
