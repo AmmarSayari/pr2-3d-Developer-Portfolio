@@ -51,7 +51,7 @@ const Education = () => {
               <h3 className="text-white text-[25px] font-bold mt-6">
                 Relavent Courses:
               </h3>
-              <div className="mt-3 flex flex-wrap gap-2 sm:gap-6 ">
+              <div className="mt-3 flex flex-wrap gap-0 sm:gap-6 ">
                 {relaventCourses.map((relaventCourse, index) => (
                   <CoursesCard 
                     key={relaventCourse.title}
