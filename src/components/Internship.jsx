@@ -49,7 +49,7 @@ const Internship = () => {
               <h3 className="text-white text-[25px] font-bold mt-6">
                 Focus areas:
               </h3>
-              <div className="mt-3 flex flex-wrap gap-6 ">
+              <div className="mt-3 flex flex-wrap gap-2 sm:gap-6 ">
                 {internAreas.map((internArea, index) => (
                   <CoursesCard 
                     key={internArea.title}
