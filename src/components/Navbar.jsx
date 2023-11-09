@@ -49,7 +49,7 @@ const Navbar = () => {
             <img
               src={twitter}
               alt='twitter'
-              className='w-[70%] h-[70%] bg-[#e3e3e3] rounded-full'
+              className='w-[70%] h-[70%] bg-[#e3e3e3] rounded-md'
             />
           </button>
 
