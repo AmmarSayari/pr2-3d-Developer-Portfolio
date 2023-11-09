@@ -92,6 +92,7 @@ const Contact = () => {
               className='bg-tertiary py-4 px-6
                placeholder:text-secondary text-white 
                rounded-lg outline-none border-none font-medium'
+              required
             />
           </label>
 
@@ -108,6 +109,7 @@ const Contact = () => {
               className='bg-tertiary py-4 px-6
                placeholder:text-secondary text-white 
                rounded-lg outline-none border-none font-medium'
+              required
             />
           </label>
 
@@ -124,6 +126,7 @@ const Contact = () => {
               className='bg-tertiary py-4 px-6
                placeholder:text-secondary text-white 
                rounded-lg outline-none border-none font-medium'
+              required
             />
           </label>
 

@@ -19,11 +19,7 @@ const App = () => {
         <div >
           <Navbar />
           <div className="relative">
-           
-            <Hero />
-            
-            
-            
+            <Hero />    
           </div>
         </div>
         <About />

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import {styles} from '../styles';
 import { navLinks} from '../constants';
-import {menu,close, linkedin} from '../assets';
+import {menu,close, linkedin, twitter} from '../assets';
 
 import logoA1 from '../assets/logoA1.png';
 
@@ -41,17 +41,29 @@ const Navbar = () => {
               </span> 
             </p>
           </Link>
-          <div
+        
+          <button
             onClick={() => window.open("https://www.linkedin.com/in/%D8%B9%D9%85%D8%A7%D8%B1-%D8%A7%D9%84%D8%B5%D9%8A%D8%B9%D8%B1%D9%8A-50a5a0287/", "_blank")}
-            className='black-gradient w-[45px] h-[45px] rounded-full 
-              flex justify-center items-center cursor-pointer'
+            className='btnIcon1 w-[45px] h-[45px] rounded-xl'
+          >
+            <img
+              src={twitter}
+              alt='twitter'
+              className='w-[70%] h-[70%] bg-[#e3e3e3] rounded-full'
+            />
+          </button>
+
+          <button
+            onClick={() => window.open("https://twitter.com/amar9dev", "_blank")}
+            className='btnIcon1 w-[45px] h-[45px] rounded-xl'
           >
             <img
               src={linkedin}
-              alt='linked'
-              className='w-[60%] h-[60%] object-contain'
+              alt='linkedIn'
+              className='w-[70%] h-[70%]'
             />
-          </div>
+          </button>
+
         </div>
 
         

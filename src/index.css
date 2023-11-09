@@ -5,42 +5,86 @@
 @tailwind utilities;
 
 
-.button {
+
+
+.btnIcon1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 3px;
+  font-size: 17px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.btnIcon1:hover {
+  color: white;
+}
+
+.btnIcon1::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -20px;
+  transform: skewX(45deg);
+  background-color: rgba(255,255,255,0.4);
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btnIcon1:hover::before {
+  width: 200%;
+}
+
+
+
+
+
+
+.buttonCustom1 {
   padding: 1em 2em;
   border: none;
   border-radius: 20px;
   font-weight: bold;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #035c8f;
+  color: rgba(255,255,255,0.2);
   transition: all 1000ms;
   font-size: 20px;
   position: relative;
   overflow: hidden;
-  outline: 3px solid #035c8f;
+  outline: 3px solid rgba(255,255,255,0.4);
 }
 
-button:hover {
+.buttonCustom1:hover {
   color: #ffffff;
   transform: scale(1.1);
-  outline: 3px solid rgb(4, 81, 136);
-  box-shadow: 4px 5px 17px -4px #035c8f;
+  outline: 3px solid rgba(255,255,255,0.2);
+  box-shadow: 4px 5px 17px -4px rgba(255,255,255,0.2);
 }
 
-button::before {
+.buttonCustom1::before {
   content: "";
   position: absolute;
   left: -50px;
   top: 0;
   width: 0;
   height: 100%;
-  background-color: #035c8f;
+  background-color: rgba(255,255,255,0.2);
   transform: skewX(45deg);
   z-index: -1;
   transition: width 1000ms;
 }
 
-button:hover::before {
+.buttonCustom1:hover::before {
   width: 250%;
 }
 

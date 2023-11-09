@@ -77,7 +77,7 @@ const Hero = () => {
                 
               </div>
               <div className="mt-9 mx-auto">
-                <button className="button">
+                <button className="buttonCustom1">
                   <a href="#contact" >
                       Contact me
                   </a>
