@@ -5,6 +5,48 @@
 @tailwind utilities;
 
 
+.button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #035c8f;
+  transition: all 1000ms;
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+  outline: 3px solid #035c8f;
+}
+
+button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 3px solid rgb(4, 81, 136);
+  box-shadow: 4px 5px 17px -4px #035c8f;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #035c8f;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+
+
+
+
 .custom-bg {
   background-image: url('./assets/spaceblue.png');
   background-repeat: no-repeat;

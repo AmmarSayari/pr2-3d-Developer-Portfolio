@@ -35,27 +35,38 @@ const Hero = () => {
 
             <div className="hidden sm:flex">              
               <div
-                  className="w-2 sm:h-80 h-40 rounded "
+                  className="w-2 sm:h-[400px] rounded "
                   style={{
                     background: 'linear-gradient(to bottom, #1EBBD7, transparent)',
                   }}
                 />
             </div>
             <div className="flex flex-col">
-              <div>
+              <div className="max-w-[700px]">
+                {/*
                 <h1 className={`${styles.heroHeadText} text-white`}>
                   Hi, I'm &nbsp;
                   <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#1EBBD7] to-[#0077B6]">
                     Ammar
                   </span>
                 </h1>
+                */}
                 <p className={`${styles.heroSubText}
-                  mt-2 text-white-100
+                   text-white-100 
                 `}>
-                  Full-stack developer with expertise in devoloping 
-                  <br className="sm:block hidden"/> 
-                  web applications and back-end systems.  
+                  Full-stack developer, passionate about transforming ideas into real products
                 </p>
+                <p className="mt-3 font-mono text-lg">
+                  Holds a Bachelor's degree in Information Technology from (KAU)
+                </p>
+              </div>
+              
+              <div className="mt-9 mx-auto">
+                <button className="button">
+                  <a href="#contact" >
+                      Contact me
+                  </a>
+                </button>
               </div>
 
               <div className="flex flex-row h-[160px] max-w-[600px]  justify-center items-center mt-5">
@@ -69,8 +80,9 @@ const Hero = () => {
                   }}
                 />
                 <Tech  />
-              </div>
 
+                
+              </div>
             </div>
 
             <ProfileImage />
