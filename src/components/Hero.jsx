@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
+import { StarsCanvas } from "../components";
 
 import ProfileImage from "./ui/ProfileImage";
 import Tech from "./Tech";
@@ -24,13 +25,15 @@ const Hero = () => {
 
   return (
     <section className={`relative w-full h-screen mx-auto `}>
+      <StarsCanvas />
         <div className={`${styles.paddingX} 
-          absolute inset-0 top-[120px] max-w-7xl mx-auto
-          flex flex-col sm:flex-row items-start gap-5
+          absolute inset-0 max-w-7xl mx-auto
+          flex flex-col sm:flex-row items-center justify-center gap-5
         `}>
           
+          
 
-            <div className="justify-center items-center mt-5 hidden sm:flex">              
+            <div className="hidden sm:flex">              
               <div
                   className="w-2 sm:h-80 h-40 rounded "
                   style={{

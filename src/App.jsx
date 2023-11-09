@@ -18,9 +18,12 @@ const App = () => {
       <div className="relative z-0 bg-primary">
         <div >
           <Navbar />
-          <div className="relative z-0">
+          <div className="relative">
+           
             <Hero />
-            <StarsCanvas />
+            
+            
+            
           </div>
         </div>
         <About />

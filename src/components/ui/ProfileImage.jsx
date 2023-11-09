@@ -11,7 +11,7 @@ const ProfileImage = () => {
   };
   return (
     
-    <div className={`relative  w-32 ${isMobile ? 'min-h-[200px] ml-7' : 'min-h-[550px]'} min-w-[200px] `}>
+    <div className={`relative  w-32 ${isMobile ? 'min-h-[200px] ' : 'min-h-[550px]'} min-w-[200px] `}>
 
       <div className=" rounded-full absolute inset-0  " >
         <img
