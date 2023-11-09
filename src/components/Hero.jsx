@@ -60,14 +60,7 @@ const Hero = () => {
                   Holds a Bachelor's degree in Information Technology from (KAU)
                 </p>
               </div>
-              
-              <div className="mt-9 mx-auto">
-                <button className="button">
-                  <a href="#contact" >
-                      Contact me
-                  </a>
-                </button>
-              </div>
+            
 
               <div className="flex flex-row h-[160px] max-w-[600px]  justify-center items-center mt-5">
                 <h1 className={`${styles.heroSubText} text-white ml-6 hidden sm:block`}>
@@ -82,6 +75,13 @@ const Hero = () => {
                 <Tech  />
 
                 
+              </div>
+              <div className="mt-9 mx-auto">
+                <button className="button">
+                  <a href="#contact" >
+                      Contact me
+                  </a>
+                </button>
               </div>
             </div>
 
