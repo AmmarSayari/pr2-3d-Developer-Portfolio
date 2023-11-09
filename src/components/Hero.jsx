@@ -56,7 +56,7 @@ const Hero = () => {
                 `}>
                   Full-stack developer, passionate about transforming ideas into real products
                 </p>
-                <p className="mt-3 font-mono text-lg">
+                <p className="mt-3 font-mono text-sm sm:text-lg">
                   Holds a Bachelor's degree in Information Technology from (KAU)
                 </p>
               </div>
