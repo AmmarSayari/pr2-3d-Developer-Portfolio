@@ -43,7 +43,7 @@ const Navbar = () => {
           </Link>
         
           <button
-            onClick={() => window.open("https://www.linkedin.com/in/%D8%B9%D9%85%D8%A7%D8%B1-%D8%A7%D9%84%D8%B5%D9%8A%D8%B9%D8%B1%D9%8A-50a5a0287/", "_blank")}
+            onClick={() => window.open("https://twitter.com/amar9dev", "_blank")}
             className='btnIcon1 w-[45px] h-[45px] rounded-xl'
           >
             <img
@@ -52,9 +52,9 @@ const Navbar = () => {
               className='w-[70%] h-[70%] bg-[#e3e3e3] rounded-md'
             />
           </button>
-
+          
           <button
-            onClick={() => window.open("https://twitter.com/amar9dev", "_blank")}
+            onClick={() => window.open("https://www.linkedin.com/in/%D8%B9%D9%85%D8%A7%D8%B1-%D8%A7%D9%84%D8%B5%D9%8A%D8%B9%D8%B1%D9%8A-50a5a0287/", "_blank")}
             className='btnIcon1 w-[45px] h-[45px] rounded-xl'
           >
             <img
