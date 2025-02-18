@@ -49,6 +49,7 @@ import storeadmin from "./storeadmin.png";
 import internPic from "./internPic.jpg";
 import linkedin from "./linkedin.png";
 import twitter from "./twitter.png";
+import whatsapplogo from "./whatsapplogo.svg";
 
 export {
   logo,
@@ -95,4 +96,5 @@ export {
   internPic,
   linkedin,
   twitter,
+  whatsapplogo,
 };

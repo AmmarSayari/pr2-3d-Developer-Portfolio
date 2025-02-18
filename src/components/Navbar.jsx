@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import {styles} from '../styles';
 import { navLinks} from '../constants';
-import {menu,close, linkedin, twitter} from '../assets';
+import {menu,close, linkedin, twitter,whatsapplogo} from '../assets';
 
 import logoA1 from '../assets/logoA1.png';
 
@@ -60,6 +60,17 @@ const Navbar = () => {
             <img
               src={linkedin}
               alt='linkedIn'
+              className='w-[70%] h-[70%]'
+            />
+          </button>
+
+          <button
+            onClick={() => window.open("https://wa.me/966504704030", "_blank")}
+            className='btnIcon1 w-[45px] h-[45px] rounded-xl'
+          >
+            <img
+              src={whatsapplogo}
+              alt='whatsapplogo'
               className='w-[70%] h-[70%]'
             />
           </button>
