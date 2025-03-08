@@ -42,7 +42,7 @@ const Navbar = () => {
             </p>
           </Link>
         
-          <button
+          {/* <button
             onClick={() => window.open("https://twitter.com/amar9dev", "_blank")}
             className='btnIcon1 w-[45px] h-[45px] rounded-xl'
           >
@@ -51,7 +51,7 @@ const Navbar = () => {
               alt='twitter'
               className='w-[70%] h-[70%] bg-[#e3e3e3] rounded-md'
             />
-          </button>
+          </button> */}
           
           <button
             onClick={() => window.open("https://www.linkedin.com/in/amar9dev/", "_blank")}

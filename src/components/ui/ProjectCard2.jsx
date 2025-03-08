@@ -53,8 +53,9 @@ const ProjectCard2 = ({
                               className='w-1/2 h-1/2 object-contain'
                             />
                           </div>
-                          
-                          <div
+                          {/* sdf*/}
+
+                          {/* <div
                             onClick={() => {
                               if (app.live_preview_link) {
                                 window.open(app.live_preview_link, "_blank");
@@ -70,7 +71,9 @@ const ProjectCard2 = ({
                               alt='review code'
                               className='w-1/2 h-1/2 object-contain'
                             />
-                          </div>
+                          </div> */}
+
+                          {/* sdf*/}
                         </div>
                         <div className=" ">
                           {app.images.map((image, imageIndex) => (
