@@ -6,6 +6,7 @@ import { navLinks} from '../constants';
 import {menu,close, linkedin, twitter,whatsapplogo} from '../assets';
 
 import logoA1 from '../assets/logoA1.png';
+import cv from '../assets/pdffile/AmmarSayariResume3nwLn.pdf';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -52,7 +53,12 @@ const Navbar = () => {
               className='w-[70%] h-[70%] bg-[#e3e3e3] rounded-md'
             />
           </button> */}
-          
+          <button
+            onClick={() => window.open(cv, "_blank")}
+            className='btnIcon1 w-[45px] h-[45px] rounded-xl'
+          >
+            <p className='text-white text-[14px] font-bold'>CV</p>
+          </button>
           <button
             onClick={() => window.open("https://www.linkedin.com/in/amar9dev/", "_blank")}
             className='btnIcon1 w-[45px] h-[45px] rounded-xl'
