@@ -6,7 +6,7 @@ import { navLinks} from '../constants';
 import {menu,close, linkedin, twitter,whatsapplogo} from '../assets';
 
 import logoA1 from '../assets/logoA1.png';
-import cv from '../assets/pdffile/AmmarSayariResume3nwLn.pdf';
+import cv from '../assets/pdffile/AmmarSayariResume25-7.pdf';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
