@@ -1,0 +1,4 @@
+.journey-transition-v2::before,
+.journey-transition-v2__tunnel {
+  display: none;
+}

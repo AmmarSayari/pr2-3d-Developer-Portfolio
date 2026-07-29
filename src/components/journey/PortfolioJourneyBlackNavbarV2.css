@@ -1,0 +1,4 @@
+/* The legacy navbar used Tailwind's primary #050816. Match the new true-black space. */
+.portfolio-journey-v2 > nav:first-of-type {
+  background: #000000;
+}

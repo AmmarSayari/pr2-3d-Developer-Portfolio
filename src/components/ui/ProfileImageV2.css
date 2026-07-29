@@ -1,0 +1,246 @@
+.profile-orbit-v2 {
+  --orbit-cyan: #1ebbd7;
+  --orbit-ivory: #f4f1de;
+
+  position: relative;
+  isolation: isolate;
+  flex: 0 0 auto;
+  width: clamp(190px, 24vw, 300px);
+  height: clamp(270px, 36vw, 420px);
+  display: grid;
+  place-items: center;
+}
+
+.profile-orbit-v2__glow {
+  position: absolute;
+  z-index: -3;
+  width: 76%;
+  height: 68%;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      rgba(244, 241, 222, 0.2),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 58% 58%,
+      rgba(30, 187, 215, 0.4),
+      transparent 67%
+    );
+  filter: blur(22px);
+}
+
+.profile-orbit-v2__ring {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  border: 1px solid rgba(30, 187, 215, 0.72);
+  pointer-events: none;
+}
+
+.profile-orbit-v2__ring--wide {
+  width: 108%;
+  height: 54%;
+  animation: profile-orbit-wide 16s linear infinite;
+}
+
+.profile-orbit-v2__ring--tall {
+  width: 76%;
+  height: 96%;
+  border-color: rgba(244, 241, 222, 0.5);
+  animation: profile-orbit-tall 21s linear infinite reverse;
+}
+
+.profile-orbit-v2__ring span {
+  position: absolute;
+  top: -6px;
+  left: 48%;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--orbit-ivory);
+  box-shadow:
+    0 0 8px rgba(244, 241, 222, 0.9),
+    0 0 20px rgba(244, 241, 222, 0.55);
+}
+
+.profile-orbit-v2__ring--tall span {
+  background: var(--orbit-cyan);
+  box-shadow:
+    0 0 8px rgba(30, 187, 215, 0.9),
+    0 0 20px rgba(30, 187, 215, 0.6);
+}
+
+.profile-orbit-v2__frame {
+  position: relative;
+  width: 78%;
+  height: auto;
+  aspect-ratio: 1;
+  padding: 3px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: linear-gradient(
+    145deg,
+    var(--orbit-cyan),
+    rgba(244, 241, 222, 0.78),
+    var(--orbit-cyan)
+  );
+  box-shadow:
+    0 22px 55px rgba(30, 187, 215, 0.18),
+    0 0 34px rgba(244, 241, 222, 0.08);
+}
+
+.profile-orbit-v2__lens {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  background: rgba(5, 8, 22, 0.58);
+}
+
+.profile-orbit-v2__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+  transform: scale(1.04);
+  transition: transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.profile-orbit-v2__glass {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      118deg,
+      rgba(244, 241, 222, 0.17),
+      transparent 25%,
+      transparent 70%,
+      rgba(30, 187, 215, 0.14)
+    ),
+    linear-gradient(to top, rgba(5, 8, 22, 0.28), transparent 38%);
+  box-shadow: inset 0 1px 0 rgba(244, 241, 222, 0.45);
+}
+
+.profile-orbit-v2__star {
+  position: absolute;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--orbit-ivory);
+  box-shadow:
+    0 0 5px rgba(244, 241, 222, 0.9),
+    0 0 13px rgba(244, 241, 222, 0.5);
+  animation: profile-star-pulse 3.4s ease-in-out infinite;
+}
+
+.profile-orbit-v2__star--one {
+  top: 17%;
+  right: 3%;
+}
+
+.profile-orbit-v2__star--two {
+  bottom: 19%;
+  left: 2%;
+  animation-delay: -1.2s;
+}
+
+.profile-orbit-v2__star--three {
+  top: 7%;
+  left: 19%;
+  width: 3px;
+  height: 3px;
+  background: var(--orbit-cyan);
+  animation-delay: -2.1s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .profile-orbit-v2:hover .profile-orbit-v2__image {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 639px) {
+  .profile-orbit-v2 {
+    width: 176px;
+    height: 205px;
+    margin-top: 2px;
+  }
+
+  .profile-orbit-v2__frame {
+    width: 86%;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  .profile-orbit-v2__image {
+    object-position: center 12%;
+  }
+
+  .profile-orbit-v2__ring--wide {
+    width: 104%;
+  }
+
+  .profile-orbit-v2__ring--tall {
+    height: 100%;
+  }
+
+  .profile-orbit-v2__star--three {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-orbit-v2__ring,
+  .profile-orbit-v2__star {
+    animation: none;
+  }
+
+  .profile-orbit-v2__image {
+    transition: none;
+  }
+
+  .profile-orbit-v2:hover .profile-orbit-v2__image {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes profile-orbit-wide {
+  from {
+    transform: rotate(-18deg);
+  }
+
+  to {
+    transform: rotate(342deg);
+  }
+}
+
+@keyframes profile-orbit-tall {
+  from {
+    transform: rotate(28deg);
+  }
+
+  to {
+    transform: rotate(388deg);
+  }
+}
+
+@keyframes profile-star-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.75);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}

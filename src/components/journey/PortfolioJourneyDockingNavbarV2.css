@@ -1,0 +1,110 @@
+.journey-docking-navbar-v2 {
+  position: relative;
+  z-index: 50;
+}
+
+/*
+ * Only the first nav inside the wrapper is the portfolio identity/actions bar.
+ * The Travel Station keeps its existing independent layout and behavior.
+ */
+.journey-docking-navbar-v2 > nav:first-child {
+  top: 14px !important;
+  right: auto !important;
+  left: max(64px, calc((100vw - 1280px) / 2 + 64px)) !important;
+  width: max-content !important;
+  max-width: calc(100% - 32px);
+  padding: 10px 14px !important;
+  transform: none;
+  overflow: visible;
+  border: 1px solid rgba(244, 241, 222, 0.13);
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.42) !important;
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(6px) saturate(108%);
+  -webkit-backdrop-filter: blur(6px) saturate(108%);
+}
+
+/*
+ * The centered ONLINE label from the first Docking Rail pass is preserved
+ * here but disabled:
+ *
+ * .journey-docking-navbar-v2 > nav:first-child::before {
+ *   content: "ONLINE";
+ * }
+ */
+
+.journey-docking-navbar-v2 > nav:first-child::after {
+  position: absolute;
+  right: 15%;
+  bottom: -1px;
+  left: 15%;
+  height: 1px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(30, 187, 215, 0.08) 18%,
+    rgba(30, 187, 215, 0.52) 50%,
+    rgba(30, 187, 215, 0.08) 82%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.journey-docking-navbar-v2 > nav:first-child > div {
+  width: auto;
+  max-width: none;
+}
+
+.journey-docking-navbar-v2 > nav:first-child > div > div {
+  width: auto;
+}
+
+/*
+ * The earlier split layout is preserved but disabled so the actions now stay
+ * beside the identity:
+ *
+ * .journey-docking-navbar-v2
+ *   > nav:first-child
+ *   > div
+ *   > div
+ *   > button:first-child {
+ *   margin-right: auto;
+ * }
+ */
+
+@media (max-width: 640px) {
+  .journey-docking-navbar-v2 > nav:first-child {
+    top: max(8px, env(safe-area-inset-top)) !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: max-content !important;
+    max-width: calc(100% - 16px);
+    padding: 8px 10px !important;
+    border-radius: 16px;
+  }
+
+  .journey-docking-navbar-v2 > nav:first-child > div > div {
+    gap: 0.55rem;
+  }
+
+  .journey-docking-navbar-v2 > nav:first-child .btnIcon1 {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .journey-docking-navbar-v2 > nav:first-child::after {
+    right: 20%;
+    left: 20%;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .journey-docking-navbar-v2 > nav:first-child {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}

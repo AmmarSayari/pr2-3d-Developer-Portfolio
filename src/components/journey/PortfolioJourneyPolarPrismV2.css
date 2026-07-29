@@ -1,0 +1,149 @@
+.journey-transition-v2__orbital-seal {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: clamp(190px, 24vw, 278px);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(244, 241, 222, 0.54);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 50% 44%,
+      rgba(30, 187, 215, 0.1),
+      rgba(6, 10, 25, 0.72) 48%,
+      rgba(6, 10, 25, 0.46) 69%,
+      transparent 72%
+    );
+  box-shadow:
+    0 0 0 8px rgba(30, 187, 215, 0.07),
+    0 0 46px rgba(30, 187, 215, 0.18),
+    inset 0 0 34px rgba(154, 231, 255, 0.08);
+  isolation: isolate;
+  animation: journey-orbital-seal-arrival 920ms ease-out both;
+}
+
+.journey-transition-v2__orbital-copy {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  width: 76%;
+  justify-items: center;
+  text-align: center;
+}
+
+.journey-transition-v2 .journey-transition-v2__orbital-copy p {
+  margin: 0;
+  color: #9ae7ff;
+  font-size: clamp(0.62rem, 1.2vw, 0.75rem);
+}
+
+.journey-transition-v2 .journey-transition-v2__orbital-copy h2 {
+  max-width: 100%;
+  margin: 0.45rem 0 0;
+  color: #f4f1de;
+  font-size: clamp(1.5rem, 4.1vw, 2.9rem);
+  overflow-wrap: anywhere;
+  text-align: center;
+  text-shadow:
+    0 0 22px rgba(154, 231, 255, 0.18),
+    0 0 38px rgba(30, 187, 215, 0.12);
+}
+
+.journey-transition-v2__orbital-station {
+  position: relative;
+  z-index: 3;
+  margin-top: 0.6rem;
+  color: rgba(244, 241, 222, 0.64);
+  font-family: monospace;
+  font-size: clamp(0.61rem, 1.2vw, 0.75rem);
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.journey-transition-v2__orbital-ring {
+  position: absolute;
+  z-index: 1;
+  inset: -13% 12%;
+  border: 1px solid rgba(30, 187, 215, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: rotate(54deg);
+  animation: journey-orbital-ring-sweep 920ms ease-out both;
+}
+
+.journey-transition-v2__orbital-ring--secondary {
+  inset: 12% -13%;
+  border-color: rgba(154, 231, 255, 0.42);
+  transform: rotate(-54deg);
+  animation-direction: reverse;
+}
+
+.journey-transition-v2__orbital-dot {
+  position: absolute;
+  z-index: 4;
+  top: 9%;
+  left: 17%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ff7a59;
+  box-shadow:
+    0 0 12px rgba(255, 122, 89, 0.9),
+    0 0 26px rgba(255, 122, 89, 0.4);
+  pointer-events: none;
+}
+
+@keyframes journey-orbital-seal-arrival {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+
+  32% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes journey-orbital-ring-sweep {
+  0% {
+    opacity: 0;
+    scale: 0.82;
+  }
+
+  42% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media (max-width: 639px) {
+  .journey-transition-v2__orbital-seal {
+    width: min(52vw, 190px);
+  }
+
+  .journey-transition-v2__orbital-ring {
+    inset: -11% 13%;
+  }
+
+  .journey-transition-v2__orbital-ring--secondary {
+    inset: 13% -11%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-transition-v2__orbital-seal,
+  .journey-transition-v2__orbital-ring {
+    animation: none;
+  }
+}

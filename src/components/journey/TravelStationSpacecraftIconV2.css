@@ -1,0 +1,76 @@
+.travel-station-spacecraft-v2 {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: var(--journey-cyan);
+  filter: drop-shadow(0 0 5px rgba(30, 187, 215, 0.38));
+  transform: rotate(42deg);
+}
+
+.travel-station-spacecraft-v2__body,
+.travel-station-spacecraft-v2__fins,
+.travel-station-spacecraft-v2__trail {
+  position: absolute;
+  display: block;
+}
+
+.travel-station-spacecraft-v2__body {
+  top: 1px;
+  left: 6px;
+  width: 7px;
+  height: 12px;
+  border: 1px solid currentColor;
+  border-radius: 55% 55% 35% 35%;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.travel-station-spacecraft-v2__body::after {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  width: 2px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+  transform: translateX(-50%);
+}
+
+.travel-station-spacecraft-v2__fins {
+  top: 8px;
+  left: 3px;
+  width: 13px;
+  height: 6px;
+  border-right: 1px solid currentColor;
+  border-left: 1px solid currentColor;
+  transform: perspective(8px) rotateX(-18deg);
+}
+
+.travel-station-spacecraft-v2__trail {
+  top: 14px;
+  left: 8px;
+  width: 3px;
+  height: 4px;
+  background: linear-gradient(180deg, currentColor, transparent);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .journey-station-v2__heading:hover .travel-station-spacecraft-v2,
+  .journey-station-v2__mobile-trigger:hover .travel-station-spacecraft-v2 {
+    animation: travel-station-spacecraft-v2-launch 700ms ease-in-out;
+  }
+}
+
+@keyframes travel-station-spacecraft-v2-launch {
+  0%,
+  100% {
+    transform: rotate(42deg) translate(0);
+  }
+
+  45% {
+    transform: rotate(42deg) translate(-1px, -2px);
+  }
+}

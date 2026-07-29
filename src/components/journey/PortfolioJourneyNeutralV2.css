@@ -1,0 +1,45 @@
+.portfolio-journey-v2__space-wash,
+.portfolio-journey-v2[data-destination="education"]
+  .portfolio-journey-v2__space-wash,
+.portfolio-journey-v2[data-destination="projects"]
+  .portfolio-journey-v2__space-wash,
+.portfolio-journey-v2[data-destination="contact"]
+  .portfolio-journey-v2__space-wash {
+  background:
+    radial-gradient(
+      circle at 76% 34%,
+      rgba(244, 241, 222, 0.075),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 18% 78%,
+      rgba(238, 241, 242, 0.04),
+      transparent 31%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 8, 22, 0.3),
+      rgba(5, 8, 22, 0.76)
+    );
+}
+
+.portfolio-journey-v2[data-destination="hero"]
+  .portfolio-journey-v2__content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.portfolio-journey-v2[data-destination="hero"]
+  .portfolio-journey-v2__chapter
+  > section
+  > div:first-child {
+  display: none;
+}
+
+.journey-transition-v2__tunnel span {
+  border-color: rgba(244, 241, 222, 0.42);
+}
+
+.journey-transition-v2__tunnel span:nth-child(2) {
+  border-color: rgba(238, 241, 242, 0.28);
+}

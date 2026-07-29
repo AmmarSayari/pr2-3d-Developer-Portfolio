@@ -1,0 +1,61 @@
+/* Neutral, more transparent travel-station surfaces. */
+.journey-station-v2--desktop {
+  border-color: rgba(244, 241, 222, 0.11);
+  background: rgba(0, 0, 0, 0.34);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+/* Keep the classic identity on the left and its unchanged actions on the right. */
+.portfolio-journey-v2 > nav:first-of-type > div > div {
+  width: 100%;
+}
+
+.portfolio-journey-v2
+  > nav:first-of-type
+  > div
+  > div
+  > button:first-child {
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  .journey-station-v2__mobile-trigger {
+    border-color: rgba(244, 241, 222, 0.1);
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(9px);
+  }
+
+  .journey-station-v2__mobile-sheet {
+    border-top-color: rgba(244, 241, 222, 0.11);
+    background: rgba(0, 0, 0, 0.74);
+    box-shadow: 0 -22px 60px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(14px);
+  }
+
+  .journey-station-v2__mobile-route {
+    isolation: isolate;
+  }
+
+  .journey-station-v2__mobile-route::before {
+    z-index: 0;
+  }
+
+  .journey-station-v2__mobile-stop {
+    z-index: 1;
+  }
+
+  .journey-station-v2__mobile-number,
+  .journey-station-v2__mobile-stop.is-active
+    .journey-station-v2__mobile-number {
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.94);
+  }
+}
+
+@media (max-width: 520px) {
+  .portfolio-journey-v2 > nav:first-of-type > div > div {
+    gap: 0.55rem;
+  }
+}

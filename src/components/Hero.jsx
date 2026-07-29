@@ -1,9 +1,12 @@
-import { motion } from "framer-motion";
+// Preserved for the disabled bottom-center About control:
+// import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { StarsCanvas } from "../components";
 
-import ProfileImage from "./ui/ProfileImage";
+// Legacy portrait preserved for the original Hero:
+// import ProfileImage from "./ui/ProfileImage";
+import ProfileImageV2 from "./ui/ProfileImageV2";
 import Tech from "./Tech";
 
 import React, { useState, useEffect } from 'react';
@@ -85,32 +88,38 @@ const Hero = () => {
               </div>
             </div>
 
+            {/* Legacy portrait:
             <ProfileImage />
+            */}
+            <ProfileImageV2 />
           
         </div>
       
           
-      <div className="absolute xs:bottom-10 bottom-32
-          w-full flex justify-center items-center"
-      >
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl 
-              border-4 border-secondary flex justify-center items-start p-2 "
-          >
-            <motion.div 
-              animate={{
-                y: [0, 24, 0]
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: 'loop'
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
-          </div>
-        </a>
-      </div>
+      {/*
+        Legacy bottom-center About control disabled:
+        <div className="absolute xs:bottom-10 bottom-32
+            w-full flex justify-center items-center"
+        >
+          <a href="#about">
+            <div className="w-[35px] h-[64px] rounded-3xl
+                border-4 border-secondary flex justify-center items-start p-2 "
+            >
+              <motion.div
+                animate={{
+                  y: [0, 24, 0]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: 'loop'
+                }}
+                className="w-3 h-3 rounded-full bg-secondary mb-1"
+              />
+            </div>
+          </a>
+        </div>
+      */}
     </section>
   )
 }

@@ -1,0 +1,73 @@
+.journey-station-v2--desktop {
+  border-color: rgba(244, 241, 222, 0.15);
+  background: rgba(9, 13, 31, 0.56);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(12px);
+}
+
+.journey-transition-v2::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: min(125vw, 1100px);
+  aspect-ratio: 1;
+  background: repeating-conic-gradient(
+    from 4deg,
+    transparent 0deg 11deg,
+    rgba(244, 241, 222, 0.34) 11.25deg 11.5deg,
+    transparent 11.75deg 23deg
+  );
+  mask-image: radial-gradient(
+    circle,
+    transparent 0 13%,
+    #000 21% 54%,
+    transparent 72%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle,
+    transparent 0 13%,
+    #000 21% 54%,
+    transparent 72%
+  );
+  opacity: 0;
+  animation: journey-balanced-streaks 760ms ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes journey-balanced-streaks {
+  0% {
+    opacity: 0;
+    transform: scale(0.42) rotate(0deg);
+  }
+
+  42% {
+    opacity: 0.56;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.08) rotate(4deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .journey-station-v2__mobile-trigger {
+    border-color: rgba(244, 241, 222, 0.14);
+    background: rgba(9, 13, 31, 0.7);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.24);
+  }
+
+  .journey-station-v2__mobile-sheet {
+    background: rgba(9, 13, 31, 0.92);
+  }
+
+  .journey-transition-v2::before {
+    width: 170vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-transition-v2::before {
+    display: none;
+  }
+}
