@@ -58,7 +58,7 @@ import "./PortfolioJourneyBlackNavbarV2.css";
 const DESTINATIONS = [
   {
     id: "hero",
-    label: "Hero",
+    label: "Home",
     station: "Home orbit",
   },
   /*
@@ -348,7 +348,7 @@ const PortfolioJourneyV2 = () => {
             >
               {nextDestination
                 ? `Travel to ${nextDestination.label}`
-                : "Return to Hero"}
+                : "Return to Home"}
               <span aria-hidden="true">→</span>
             </button>
           </footer>

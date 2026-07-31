@@ -67,7 +67,7 @@ const JourneyNavbarClassicV2 = ({
               className="flex items-center gap-2 bg-transparent border-0"
               onClick={() => handleDestination("hero")}
               disabled={isTraveling}
-              aria-label="Travel to Hero"
+              aria-label="Travel to Home"
             >
               <img
                 src={logoA1}
@@ -156,7 +156,7 @@ const JourneyNavbarClassicV2 = ({
                 <span className="journey-topbar-v2__mobile-action-mark">
                   {activeDestination.id === "hero" ? "●" : "→"}
                 </span>
-                <span>Hero</span>
+                <span>Home</span>
               </button>
 
               <button

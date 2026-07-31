@@ -51,7 +51,7 @@ const JourneyNavbarV2 = ({
           className="journey-navbar-v2__identity"
           onClick={() => handleDestination("hero")}
           disabled={isTraveling}
-          aria-label="Travel to Hero"
+          aria-label="Travel to Home"
         >
           <span className="journey-navbar-v2__logo-orbit" aria-hidden="true">
             <img src={logoA1} alt="" />
