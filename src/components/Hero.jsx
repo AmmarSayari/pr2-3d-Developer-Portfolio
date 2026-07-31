@@ -80,11 +80,9 @@ const Hero = () => {
                 
               </div>
               <div className="mt-9 mx-auto">
-                <button className="buttonCustom1">
-                  <a href="#contact" >
-                      Contact me
-                  </a>
-                </button>
+                <a href="#contact" className="buttonCustom1 inline-block">
+                  Contact me
+                </a>
               </div>
             </div>
 
