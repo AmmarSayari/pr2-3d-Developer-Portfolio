@@ -1,0 +1,60 @@
+.sharp-glass-panel-v2 {
+  --sharp-glass-cyan: #1ebbd7;
+  --sharp-glass-ivory: #f4f1de;
+
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(244, 241, 222, 0.24);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 28px) 0,
+    100% 28px,
+    100% 100%,
+    28px 100%,
+    0 calc(100% - 28px)
+  );
+  background: rgba(244, 241, 222, 0.035);
+  isolation: isolate;
+}
+
+.sharp-glass-panel-v2::after {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: -48%;
+  width: 44%;
+  height: 3px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(30, 187, 215, 0.55),
+    var(--sharp-glass-cyan),
+    rgba(141, 232, 248, 0.95),
+    transparent
+  );
+  box-shadow: 0 0 16px rgba(30, 187, 215, 0.7);
+  pointer-events: none;
+}
+
+.sharp-glass-panel-v2:hover::after,
+.sharp-glass-panel-v2:focus-within::after {
+  animation: sharp-glass-panel-v2-border-scan 1.6s ease-in-out infinite;
+}
+
+@keyframes sharp-glass-panel-v2-border-scan {
+  0% {
+    left: -32%;
+  }
+
+  55%,
+  100% {
+    left: 104%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sharp-glass-panel-v2::after {
+    animation: none !important;
+  }
+}

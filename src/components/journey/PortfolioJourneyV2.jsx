@@ -7,6 +7,7 @@ import { useReducedMotion } from "framer-motion";
 // import Contact from "../Contact";
 import ContactSignalConsoleV2 from "../contact-v2/ContactSignalConsoleV2";
 import EducationV2 from "../EducationV2";
+import ExperienceOrbitalV2 from "../experience-v2/ExperienceOrbitalV2";
 import Hero from "../Hero";
 // Legacy Projects section preserved before the Ivory Command V2 replacement:
 // import Works from "../Works";
@@ -72,6 +73,11 @@ const DESTINATIONS = [
     id: "education",
     label: "Education",
     station: "Eclipse station",
+  },
+  {
+    id: "experience",
+    label: "Experience",
+    station: "IEI work orbit",
   },
   {
     id: "projects",
@@ -246,6 +252,8 @@ const PortfolioJourneyV2 = () => {
       */
       case "education":
         return <EducationV2 />;
+      case "experience":
+        return <ExperienceOrbitalV2 />;
       case "projects":
         // Legacy Projects render preserved: return <Works />;
         return <WorksIvoryCommandV2 />;
