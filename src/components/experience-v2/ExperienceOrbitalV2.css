@@ -191,6 +191,7 @@
 
 .experience-orbital-v2__node {
   --planet-surface-glow: rgba(30, 187, 215, 0.2);
+  --planet-surface: #08262c;
 
   position: absolute;
   z-index: 6;
@@ -207,36 +208,53 @@
   border: 1px solid rgba(244, 241, 222, 0.28);
   border-radius: 50%;
   color: var(--experience-ivory);
+  background: transparent;
+  isolation: isolate;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+  will-change: top, left, transform;
+}
+
+.experience-orbital-v2__node-surface {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+  border-radius: 50%;
   background:
     radial-gradient(
       circle at 34% 24%,
       var(--planet-surface-glow),
       transparent 62%
     ),
-    rgba(5, 10, 14, 0.96);
-  box-shadow:
-    inset 0 0 28px rgba(244, 241, 222, 0.035),
-    0 12px 34px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  transform: translate(-50%, -50%);
+    var(--planet-surface);
+  box-shadow: inset 0 0 28px rgba(244, 241, 222, 0.055);
+  pointer-events: none;
   transition:
-    border-color 180ms ease,
-    background-color 180ms ease,
     box-shadow 180ms ease,
     filter 180ms ease;
-  will-change: top, left, transform;
 }
 
 .experience-orbital-v2__node:hover,
 .experience-orbital-v2__node:focus-visible {
   border-color: var(--experience-cyan);
   outline: none;
-  filter: brightness(1.16) saturate(1.12);
   box-shadow:
-    inset 0 0 34px var(--planet-surface-glow),
     0 0 0 2px rgba(30, 187, 215, 0.12),
     0 14px 38px rgba(0, 0, 0, 0.42),
     0 0 30px rgba(30, 187, 215, 0.24);
+}
+
+.experience-orbital-v2__node:hover .experience-orbital-v2__node-surface,
+.experience-orbital-v2__node:focus-visible
+  .experience-orbital-v2__node-surface {
+  filter: brightness(1.16) saturate(1.12);
+  box-shadow: inset 0 0 34px var(--planet-surface-glow);
 }
 
 .experience-orbital-v2__node-eclipse {
@@ -280,10 +298,12 @@
 .experience-orbital-v2__node--website {
   --node-eclipse-color: var(--experience-orange);
   --planet-surface-glow: rgba(232, 148, 74, 0.22);
+  --planet-surface: #2b1b0f;
 }
 
 .experience-orbital-v2__node--stack-junior {
   --planet-surface-glow: rgba(244, 241, 222, 0.15);
+  --planet-surface: #26251f;
 }
 
 .experience-orbital-v2__node-copy {

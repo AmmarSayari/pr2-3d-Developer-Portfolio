@@ -82,8 +82,8 @@
 @media (max-width: 640px) {
   .journey-docking-navbar-v2 > nav:first-child {
     top: max(8px, env(safe-area-inset-top)) !important;
-    left: 50% !important;
-    transform: translateX(-50%);
+    left: max(8px, env(safe-area-inset-left)) !important;
+    transform: none;
     width: max-content !important;
     max-width: calc(100% - 16px);
     padding: 7px !important;
@@ -91,6 +91,15 @@
     transition:
       width 220ms ease,
       background-color 220ms ease;
+  }
+
+  .journey-docking-navbar-v2 > nav:first-child:not(.is-mobile-open) {
+    padding: 0 !important;
+    border: 0;
+    background: transparent !important;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .journey-docking-navbar-v2 > nav:first-child.is-mobile-open {
@@ -117,15 +126,16 @@
     display: grid;
     min-width: 46px;
     min-height: 46px;
-    grid-template-columns: 28px;
+    grid-template-columns: 36px;
     gap: 0;
     align-items: center;
     justify-content: center;
-    padding: 4px 5px;
-    border: 0;
-    border-radius: 11px;
+    padding: 0;
+    border: 1px solid rgba(244, 241, 222, 0.18);
+    border-radius: 13px;
     color: #f4f1de;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.76);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.34);
     cursor: pointer;
     text-align: left;
   }
@@ -142,6 +152,11 @@
     grid-template-columns: 38px minmax(0, 1fr) 28px;
     gap: 0.65rem;
     justify-content: stretch;
+    padding: 4px 5px;
+    border: 0;
+    border-radius: 11px;
+    background: transparent;
+    box-shadow: none;
   }
 
   .journey-docking-navbar-v2
@@ -180,14 +195,23 @@
 
   .journey-topbar-v2__mobile-toggle b {
     display: grid;
-    width: 28px;
+    width: 36px;
     aspect-ratio: 1;
     place-items: center;
-    border: 1px solid rgba(244, 241, 222, 0.18);
-    border-radius: 9px;
+    border: 0;
+    border-radius: 0;
     color: #1ebbd7;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .journey-docking-navbar-v2
+    > nav:first-child.is-mobile-open
+    .journey-topbar-v2__mobile-toggle
+    b {
+    width: 28px;
+    font-size: 1.25rem;
   }
 
   .journey-topbar-v2__mobile-actions {

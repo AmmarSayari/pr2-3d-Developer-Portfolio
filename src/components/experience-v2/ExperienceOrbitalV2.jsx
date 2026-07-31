@@ -252,6 +252,10 @@ const ExperienceOrbitalV2 = () => {
             key={story.id}
           >
             <span
+              className="experience-orbital-v2__node-surface"
+              aria-hidden="true"
+            />
+            <span
               className="experience-orbital-v2__node-eclipse"
               aria-hidden="true"
             />

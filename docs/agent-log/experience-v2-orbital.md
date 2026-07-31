@@ -29,3 +29,6 @@
 - Increased the planet glass opacity and added a short proximity speed boost when paths overlap.
 - Added dark, color-tinted planet surfaces so the moving nodes remain readable over the starfield.
 - Kept the dark planet surfaces visible at rest and moved hover feedback to a brighter glow.
+- Changed the planet base surface from translucent to fully opaque.
+- Gave each opaque planet a distinct dark cyan, ivory, or orange surface so it stays visible against space.
+- Moved the opaque planet body onto its own circular layer beneath the content and eclipse arcs.
