@@ -14,30 +14,39 @@ const JourneyNavbarClassicV2 = ({
   onTravel,
   targetDestination,
 }) => {
+  const [mobileActionsOpen, setMobileActionsOpen] = useState(false);
   const [stationOpen, setStationOpen] = useState(false);
 
   useEffect(() => {
-    if (!stationOpen) {
+    if (!stationOpen && !mobileActionsOpen) {
       return undefined;
     }
 
     const handleEscape = (event) => {
       if (event.key === "Escape") {
+        setMobileActionsOpen(false);
         setStationOpen(false);
       }
     };
 
     window.addEventListener("keydown", handleEscape);
     return () => window.removeEventListener("keydown", handleEscape);
-  }, [stationOpen]);
+  }, [mobileActionsOpen, stationOpen]);
 
   useEffect(() => {
+    setMobileActionsOpen(false);
     setStationOpen(false);
   }, [activeDestination.id]);
 
   const handleDestination = (destinationId) => {
+    setMobileActionsOpen(false);
     setStationOpen(false);
     onTravel(destinationId);
+  };
+
+  const openMobileAction = (url) => {
+    setMobileActionsOpen(false);
+    window.open(url, "_blank");
   };
 
   const visibleDestination = targetDestination || activeDestination;
@@ -45,12 +54,14 @@ const JourneyNavbarClassicV2 = ({
   return (
     <>
       <nav
-        className={`${styles.paddingX}
+        className={`${styles.paddingX} journey-topbar-v2 ${
+          mobileActionsOpen ? "is-mobile-open" : ""
+        }
           w-full flex items-center py-5 fixed
           top-0 z-[50] bg-primary`}
       >
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-          <div className="flex flex-row gap-6">
+          <div className="journey-topbar-v2__desktop-content flex flex-row gap-6">
             <button
               type="button"
               className="flex items-center gap-2 bg-transparent border-0"
@@ -108,6 +119,76 @@ const JourneyNavbarClassicV2 = ({
                 className="w-[70%] h-[70%]"
               />
             </button>
+          </div>
+
+          <div className="journey-topbar-v2__mobile-shell">
+            <button
+              type="button"
+              className="journey-topbar-v2__mobile-toggle"
+              onClick={() => setMobileActionsOpen((currentValue) => !currentValue)}
+              aria-expanded={mobileActionsOpen}
+              aria-controls="journey-mobile-profile-actions"
+              aria-label={
+                mobileActionsOpen
+                  ? "Close profile and social links"
+                  : "Open profile and social links"
+              }
+            >
+              <img src={logoA1} alt="" />
+              <span>
+                Ammar <small>Al-sayari</small>
+              </span>
+              <b aria-hidden="true">{mobileActionsOpen ? "×" : "+"}</b>
+            </button>
+
+            <div
+              id="journey-mobile-profile-actions"
+              className={`journey-topbar-v2__mobile-actions ${
+                mobileActionsOpen ? "is-open" : ""
+              }`}
+              hidden={!mobileActionsOpen}
+            >
+              <button
+                type="button"
+                onClick={() => handleDestination("hero")}
+                disabled={isTraveling}
+              >
+                <span className="journey-topbar-v2__mobile-action-mark">
+                  {activeDestination.id === "hero" ? "●" : "→"}
+                </span>
+                <span>Hero</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => openMobileAction(cv)}
+              >
+                <span className="journey-topbar-v2__mobile-action-mark">CV</span>
+                <span>Resume</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() =>
+                  openMobileAction(
+                    "https://www.linkedin.com/in/amar9dev/",
+                  )
+                }
+              >
+                <img src={linkedin} alt="" />
+                <span>LinkedIn</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() =>
+                  openMobileAction("https://wa.me/966504704030")
+                }
+              >
+                <img src={whatsapplogo} alt="" />
+                <span>WhatsApp</span>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
