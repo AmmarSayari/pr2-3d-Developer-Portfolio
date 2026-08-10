@@ -146,7 +146,7 @@ const ExperienceStoryModalV2 = ({ onClose, story }) => {
               <span>
                 {archiveOpen ? "Hide extra media" : "Reveal extra media"}
               </span>
-              <b aria-hidden="true">{archiveOpen ? "−" : "+"}</b>
+              <b aria-hidden="true">{archiveOpen ? "↑" : "+"}</b>
             </button>
 
             <div

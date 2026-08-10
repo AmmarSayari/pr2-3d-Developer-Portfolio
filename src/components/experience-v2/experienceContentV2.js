@@ -3,10 +3,10 @@ export const ieiExperienceCompanyV2 = {
   shortName: "IEI",
   role: "IT Specialist",
   location: "Riyadh",
-  period: "March 2025 — August 2025",
-  logoSrc: "",
+  period: "March 2025 to June 2025",
+  logoSrc: "/assets/experience/iei/brand/iei-logo.webp",
   summary:
-    "At IEI, I worked across technical support, educational programs, immersive product demonstrations, and web development—supporting people, devices, and real-world delivery.",
+    "At IEI, I worked across technical support, educational programs, immersive product demonstrations, and web development. I supported people, devices, and practical delivery.",
 };
 
 export const ieiExperienceStoriesV2 = [
@@ -16,41 +16,103 @@ export const ieiExperienceStoriesV2 = [
     orbitLabel: "School Expo",
     orbitContext: "International event",
     eyebrow: "International Schools Expo",
-    title: "VR Product Showcase",
+    title: "Educational Solutions Showcase",
     introduction:
-      "IEI showcased its immersive VR products at an international schools expo, giving visitors a direct experience of the company’s education-focused technology.",
+      "At the International Schools Expo, IEI presented a broad range of educational products, programs, and collaboration opportunities. These included StackJunior, GBAC, Space Doom, Curious Box, immersive VR experiences, and more.",
     contribution:
-      "I prepared and managed the devices, supported live demonstrations, and kept the visitor experience operating reliably throughout the event.",
+      "My main responsibility was preparing and managing the VR devices, supporting live demonstrations, and keeping the visitor experience operating reliably. I also helped present IEI’s other educational products and solutions to visitors throughout the event.",
     mediaPlan:
-      "One main professional event video, supported by selected field clips and photographs.",
+      "One main professional event video, supported by three field clips and two photographs.",
     mainVideo: {
-      src: "",
+      src: "/assets/experience/iei/expo/featured/iei-expo-main.mp4",
       poster: "",
       label: "Main professional expo video",
     },
-    extraMedia: [],
-    plannedExtraMedia: 3,
+    extraMedia: [
+      {
+        type: "video",
+        src: "/assets/experience/iei/expo/clips/iei-expo-extra-01.mp4",
+        label: "Expo field clip 01",
+      },
+      {
+        type: "video",
+        src: "/assets/experience/iei/expo/clips/iei-expo-extra-02.mp4",
+        label: "Expo field clip 02",
+      },
+      {
+        type: "video",
+        src: "/assets/experience/iei/expo/clips/iei-expo-extra-03.mp4",
+        label: "Expo field clip 03",
+      },
+      {
+        type: "image",
+        src: "/assets/experience/iei/expo/images/iei-expo-01.jpg",
+        label: "Expo field photo 01",
+        alt: "IEI VR showcase at the International Schools Expo",
+      },
+      {
+        type: "image",
+        src: "/assets/experience/iei/expo/images/iei-expo-02.jpg",
+        label: "Expo field photo 02",
+        alt: "IEI exhibition setup at the International Schools Expo",
+      },
+    ],
+    plannedExtraMedia: 5,
   },
   {
     id: "stack-junior",
     shortCode: "EDU",
-    orbitLabel: "School Program",
-    orbitContext: "Maalem Al-Safwa",
-    eyebrow: "Maalem Al-Safwa Schools",
-    title: "StackJunior School Collaboration",
+    orbitLabel: "School Collaboration",
+    orbitContext: "Maalem Al-Safwa School",
+    eyebrow: "Maalem Al-Safwa School Collaboration",
+    title: "StackJunior Educational Program",
     introduction:
-      "StackJunior was an IEI school collaboration delivered at Maalem Al-Safwa Schools, introducing young learners to technology through practical, approachable activities.",
+      "IEI collaborated with Maalem Al-Safwa School to provide StackJunior, an educational program and learning platform designed for children. It introduced students to app development and machine learning fundamentals through guided, practical activities.",
     contribution:
-      "I supervised the program delivery, taught children app-development activities and machine-learning basics, and provided technical support throughout the sessions.",
+      "I supervised the program delivery, taught children practical app development activities and machine learning basics, and provided technical support throughout the sessions.",
     mediaPlan:
-      "One main school collaboration video, supported by optional classroom clips and photographs.",
+      "One main school collaboration video, supported by three classroom clips and two photographs.",
     mainVideo: {
-      src: "",
+      src:
+        "/assets/experience/iei/stack-junior/featured/iei-stack-junior-main.mp4",
       poster: "",
       label: "Main StackJunior school video",
     },
-    extraMedia: [],
-    plannedExtraMedia: 3,
+    extraMedia: [
+      {
+        type: "video",
+        src:
+          "/assets/experience/iei/stack-junior/clips/iei-stack-junior-extra-01.mp4",
+        label: "StackJunior classroom clip 01",
+      },
+      {
+        type: "video",
+        src:
+          "/assets/experience/iei/stack-junior/clips/iei-stack-junior-extra-02.mp4",
+        label: "StackJunior classroom clip 02",
+      },
+      {
+        type: "video",
+        src:
+          "/assets/experience/iei/stack-junior/clips/iei-stack-junior-extra-03.mp4",
+        label: "StackJunior classroom clip 03",
+      },
+      {
+        type: "image",
+        src:
+          "/assets/experience/iei/stack-junior/images/iei-stack-junior-01.jpg",
+        label: "StackJunior classroom photo 01",
+        alt: "StackJunior learning session at Maalem Al-Safwa School",
+      },
+      {
+        type: "image",
+        src:
+          "/assets/experience/iei/stack-junior/images/iei-stack-junior-02.jpg",
+        label: "StackJunior classroom photo 02",
+        alt: "Students participating in the StackJunior school collaboration",
+      },
+    ],
+    plannedExtraMedia: 5,
   },
   {
     id: "website",
@@ -62,11 +124,12 @@ export const ieiExperienceStoriesV2 = [
     introduction:
       "IEI needed a company website to present its identity and offerings online. I developed ieicapital.com; because the public website is currently unavailable, the completed work is represented through my recorded walkthrough.",
     contribution:
-      "I developed the company website and prepared its public-facing experience.",
+      "I developed the company website and prepared its public website experience.",
     mediaPlan:
-      "One complete screen-recorded walkthrough of the finished website.",
+      "One complete recorded walkthrough of the finished website.",
     mainVideo: {
-      src: "",
+      src:
+        "/assets/experience/iei/website/featured/iei-website-walkthrough.mp4",
       poster: "",
       label: "IEI website walkthrough",
     },

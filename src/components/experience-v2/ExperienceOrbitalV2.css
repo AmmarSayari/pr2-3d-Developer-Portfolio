@@ -169,8 +169,8 @@
 
 .experience-orbital-v2__core img {
   display: block;
-  width: 62%;
-  height: 62%;
+  width: 92%;
+  height: 92%;
   object-fit: contain;
 }
 
@@ -588,8 +588,9 @@
   display: flex;
   width: 100%;
   min-height: 56px;
+  gap: 0.75rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0.8rem 0;
   border: 0;
   color: var(--experience-ivory);
@@ -627,8 +628,12 @@
 }
 
 .experience-orbital-v2__archive-grid.is-open {
-  max-height: 650px;
+  max-height: min(650px, 60vh);
+  max-height: min(650px, 60dvh);
   padding-bottom: 1rem;
+  padding-right: 0.35rem;
+  overflow-x: hidden;
+  overflow-y: auto;
   opacity: 1;
 }
 

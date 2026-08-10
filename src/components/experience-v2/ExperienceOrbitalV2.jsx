@@ -238,7 +238,7 @@ const ExperienceOrbitalV2 = () => {
           ) : (
             <strong>{ieiExperienceCompanyV2.shortName}</strong>
           )}
-          <span>Work orbit</span>
+          {/* Legacy core caption preserved: <span>Work orbit</span> */}
         </div>
 
         {ieiExperienceStoriesV2.map((story) => (
