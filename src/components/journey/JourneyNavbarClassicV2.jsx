@@ -324,7 +324,6 @@ const JourneyNavbarClassicV2 = ({
                   </span>
                   <span>
                     <strong>{destination.label}</strong>
-                    <small>{destination.station}</small>
                   </span>
                   <span aria-hidden="true">{isActive ? "●" : "→"}</span>
                 </button>

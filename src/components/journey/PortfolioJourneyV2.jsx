@@ -380,9 +380,6 @@ const PortfolioJourneyV2 = () => {
           <div className="journey-transition-v2__orbital-copy">
             <p>Traveling to</p>
             <h2>{targetDestination?.label}</h2>
-            <span className="journey-transition-v2__orbital-station">
-              {targetDestination?.station}
-            </span>
           </div>
         </div>
       </div>
