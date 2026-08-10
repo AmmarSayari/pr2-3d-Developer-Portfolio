@@ -1,9 +1,8 @@
 # IEI Experience Assets
 
-This folder belongs only to the IEI Experience V2 section.
-
-The section is connected to the portfolio, but its media paths remain empty
-until the optimized assets are uploaded and approved.
+This folder belongs only to the IEI Experience V2 section. Its current logo,
+main videos, field clips, and photographs are connected through
+`src/components/experience-v2/experienceContentV2.js`.
 
 ## Suggested filenames
 
@@ -20,9 +19,8 @@ until the optimized assets are uploaded and approved.
 - `website/featured/iei-website-poster.webp`
 - `website/images/iei-website-01.webp`
 
-Keep the original source files outside the project as a backup. Optimized web
-copies can be placed here when they are ready.
-
-After uploading, connect the approved filenames in:
+Keep the original source files outside the project as a backup. If a media file
+is replaced with an optimized web copy, keep the current filename so its section
+path remains stable:
 
 `src/components/experience-v2/experienceContentV2.js`
