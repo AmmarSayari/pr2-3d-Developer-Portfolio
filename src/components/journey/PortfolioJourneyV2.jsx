@@ -13,37 +13,9 @@ import Hero from "../Hero";
 // import Works from "../Works";
 import WorksIvoryCommandV2 from "../projects-v2/WorksIvoryCommandV2";
 
-// Journey-specific Hero experiment preserved but disabled:
-// import HeroJourneyV2 from "./HeroJourneyV2";
-// Redesigned identity/actions experiment preserved but disabled:
-// import JourneyNavbarV2 from "./JourneyNavbarV2";
 // Classic navbar preserved as the fallback before the Portfolio 26-8 Docking Rail:
 // import JourneyNavbarClassicV2 from "./JourneyNavbarClassicV2";
 import JourneyNavbarDockingRailV2 from "./JourneyNavbarDockingRailV2";
-// Cyan square-particle canvas experiment preserved but disabled:
-// import SpaceJourneyCanvasV2 from "./SpaceJourneyCanvasV2";
-// Forward-moving neutral canvas experiment preserved but disabled:
-// import SpaceJourneyCanvasNeutralV2 from "./SpaceJourneyCanvasNeutralV2";
-// Extra-distant starfield experiment preserved but disabled:
-// import SpaceJourneyCanvasDistantV2 from "./SpaceJourneyCanvasDistantV2";
-// Rotation-only balanced starfield experiment preserved but disabled:
-// import SpaceJourneyCanvasBalancedV2 from "./SpaceJourneyCanvasBalancedV2";
-// Point-only flight starfield preserved but disabled:
-// import SpaceJourneyCanvasFlightV2 from "./SpaceJourneyCanvasFlightV2";
-// Ivory-only light-speed treatment preserved but disabled:
-// import SpaceJourneyCanvasLightSpeedV2 from "./SpaceJourneyCanvasLightSpeedV2";
-// Static Polar Prism flight treatment preserved but disabled:
-// import SpaceJourneyCanvasPolarPrismV2 from "./SpaceJourneyCanvasPolarPrismV2";
-// Finite rotating cruise experiment preserved but disabled:
-// import SpaceJourneyCanvasCruiseV2 from "./SpaceJourneyCanvasCruiseV2";
-// Oversized deep-loop experiment preserved but disabled:
-// import SpaceJourneyCanvasDeepLoopV2 from "./SpaceJourneyCanvasDeepLoopV2";
-// Cream/white legacy-behavior adaptation preserved but disabled:
-// import SpaceJourneyCanvasLegacyBlendV2 from "./SpaceJourneyCanvasLegacyBlendV2";
-// Original stars plus Polar Prism travel preserved but disabled:
-// import SpaceJourneyCanvasOriginalV2 from "./SpaceJourneyCanvasOriginalV2";
-// Direct legacy StarsCanvas wrapper preserved but disabled:
-// import SpaceJourneyCanvasOriginalWarpV2 from "./SpaceJourneyCanvasOriginalWarpV2";
 import SpaceJourneyCanvasCopiedWarpV2 from "./SpaceJourneyCanvasCopiedWarpV2";
 
 import "./PortfolioJourneyV2.css";

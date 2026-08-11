@@ -8,3 +8,8 @@
 - Kept normal scrolling inside the active section and remembered its position.
 - Preserved the previous App layout in comments as the rollback integration.
 - No redesign work has been committed, pushed, or deployed.
+
+## 2026-08-11
+
+- Removed 14 confirmed-unused Journey JSX experiments after explicit approval.
+- Kept the active starfield, warp transition, navbar chain, and layered styles unchanged.
