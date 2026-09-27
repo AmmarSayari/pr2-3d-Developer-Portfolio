@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title description">
+  <title id="title">Ballot match controller workflow</title>
+  <desc id="description">Illustration of match setup, player hands, round review, and scoring and export.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101820"/><stop offset="1" stop-color="#061015"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#1ebbd7" stroke-opacity=".11"/></pattern>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <text x="72" y="91" fill="#1ebbd7" font-family="Arial,sans-serif" font-size="20" letter-spacing="5">BALLOT / PYTHON CONTROLLER</text>
+  <text x="72" y="160" fill="#f4f1de" font-family="Arial,sans-serif" font-size="48" font-weight="700">From cards to a match record</text>
+  <text x="72" y="202" fill="#b3c2c4" font-family="Arial,sans-serif" font-size="22">Local prototype workflow</text>
+  <path d="M155 414H1125" stroke="#1ebbd7" stroke-opacity=".65" stroke-width="4"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <g transform="translate(174 414)"><circle r="66" fill="#09242c" stroke="#1ebbd7" stroke-width="3"/><text y="13" fill="#f4f1de" font-size="45">01</text><text y="112" fill="#f4f1de" font-size="22" font-weight="700">Match setup</text><text y="142" fill="#b3c2c4" font-size="17">Players &amp; teams</text></g>
+    <g transform="translate(485 414)"><circle r="66" fill="#09242c" stroke="#1ebbd7" stroke-width="3"/><text y="13" fill="#f4f1de" font-size="45">02</text><text y="112" fill="#f4f1de" font-size="22" font-weight="700">Player hands</text><text y="142" fill="#b3c2c4" font-size="17">Scan &amp; review</text></g>
+    <g transform="translate(796 414)"><circle r="66" fill="#09242c" stroke="#1ebbd7" stroke-width="3"/><text y="13" fill="#f4f1de" font-size="45">03</text><text y="112" fill="#f4f1de" font-size="22" font-weight="700">Round review</text><text y="142" fill="#b3c2c4" font-size="17">Confirm plays</text></g>
+    <g transform="translate(1107 414)"><circle r="66" fill="#09242c" stroke="#1ebbd7" stroke-width="3"/><text y="13" fill="#f4f1de" font-size="45">04</text><text y="112" fill="#f4f1de" font-size="22" font-weight="700">Score &amp; export</text><text y="142" fill="#b3c2c4" font-size="17">Save the match</text></g>
+  </g>
+  <path d="M72 635H1208" stroke="#f4f1de" stroke-opacity=".24"/>
+  <text x="72" y="669" fill="#b3c2c4" font-family="Arial,sans-serif" font-size="17">Illustrative preview — not a screenshot of the Streamlit UI</text>
+</svg>
