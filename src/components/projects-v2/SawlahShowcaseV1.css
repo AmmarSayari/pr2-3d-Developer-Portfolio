@@ -1,0 +1,76 @@
+.sawlah-showcase-v1 {
+  padding: clamp(1rem, 2.6vw, 1.75rem);
+  border: 1px solid rgba(244, 241, 222, 0.26);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 28px) 0,
+    100% 28px,
+    100% 100%,
+    28px 100%,
+    0 calc(100% - 28px)
+  );
+  background: rgba(244, 241, 222, 0.035);
+}
+
+.sawlah-showcase-v1__heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.15rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--projects-border);
+}
+
+.sawlah-showcase-v1__heading p {
+  color: var(--projects-ivory);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-weight: 700;
+}
+
+.sawlah-showcase-v1__heading span {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid rgba(30, 187, 215, 0.5);
+  color: var(--projects-cyan);
+  background: rgba(30, 187, 215, 0.07);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sawlah-showcase-v1__tile.projects-ivory-v2__part {
+  grid-template-rows: auto auto auto 1fr;
+  gap: 0.8rem;
+  background: rgba(244, 241, 222, 0.025);
+}
+
+.sawlah-showcase-v1__tile .projects-ivory-v2__part-header {
+  padding-bottom: 0.65rem;
+}
+
+.sawlah-showcase-v1__summary {
+  align-self: start;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--projects-border);
+  color: var(--projects-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.sawlah-showcase-v1__stack {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--projects-border);
+}
+
+@media (max-width: 767px) {
+  .sawlah-showcase-v1__heading {
+    align-items: flex-start;
+  }
+
+  .sawlah-showcase-v1__tiles {
+    gap: 0.8rem;
+  }
+}
