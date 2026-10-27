@@ -17,9 +17,9 @@ import "./WorksIvoryCommandV2.css";
 
 // Keep the original project records intact and add new work separately.
 const activeProjects = [
+  malafaTechProjectV1,
   sawlahProjectV3,
   ballotProjectV1,
-  malafaTechProjectV1,
   legacyPortfolioProjectV2,
   ...projects2,
 ];

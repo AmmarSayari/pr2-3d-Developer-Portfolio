@@ -15,7 +15,7 @@ import landingPhoneHero from "../../assets/projects/malafatech/landing/landing-h
 const malafaTechProjectV1 = {
   name: "MalafaTech / ملفاتك",
   description:
-    "An Arabic-first platform for small Saudi law offices to organize clients, cases, files, appointments, and team workflows. I am its main developer, working with a lawyer cofounder on both the management app and its public website.",
+    "A platform for small Saudi law offices to organize clients, cases, files, appointments, and team workflows. I am its main developer, working with a lawyer cofounder on both the management app and its public website.",
   apps: [
     {
       name: "Law office management app",
