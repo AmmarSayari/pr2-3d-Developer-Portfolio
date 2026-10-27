@@ -12,10 +12,17 @@ import legacyPortfolioProjectV2 from "./legacyPortfolioProjectV2";
 // import sawlahProjectV2 from "./sawlahProjectV2";
 import sawlahProjectV3 from "./sawlahProjectV3";
 import ballotProjectV1 from "./ballotProjectV1";
+import malafaTechProjectV1 from "./malafaTechProjectV1";
 import "./WorksIvoryCommandV2.css";
 
 // Keep the original project records intact and add new work separately.
-const activeProjects = [sawlahProjectV3, ballotProjectV1, legacyPortfolioProjectV2, ...projects2];
+const activeProjects = [
+  sawlahProjectV3,
+  ballotProjectV1,
+  malafaTechProjectV1,
+  legacyPortfolioProjectV2,
+  ...projects2,
+];
 
 const WorksIvoryCommandV2 = () => {
   return (
