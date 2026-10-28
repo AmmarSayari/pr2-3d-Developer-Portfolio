@@ -8,7 +8,9 @@ import { useReducedMotion } from "framer-motion";
 import ContactSignalConsoleV2 from "../contact-v2/ContactSignalConsoleV2";
 import EducationV2 from "../EducationV2";
 import ExperienceOrbitalV2 from "../experience-v2/ExperienceOrbitalV2";
-import Hero from "../Hero";
+// Home before the Projects action is preserved:
+// import Hero from "../Hero";
+import HomeProjectsV2 from "../HomeProjectsV2";
 // Legacy Projects section preserved before the Ivory Command V2 replacement:
 // import Works from "../Works";
 import WorksIvoryCommandV2 from "../projects-v2/WorksIvoryCommandV2";
@@ -234,7 +236,8 @@ const PortfolioJourneyV2 = () => {
         return <ContactSignalConsoleV2 />;
       case "hero":
       default:
-        return <Hero />;
+        // Previous Home render preserved: return <Hero />;
+        return <HomeProjectsV2 />;
     }
   };
 
