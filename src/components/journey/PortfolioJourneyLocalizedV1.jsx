@@ -1,0 +1,381 @@
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useReducedMotion } from "framer-motion";
+import { usePortfolioLocaleV1 } from "../../i18n/PortfolioLocaleProviderV1";
+
+// About destination is preserved but temporarily disabled:
+// import About from "../About";
+// Legacy Contact section preserved before the Signal Console V2 replacement:
+// import Contact from "../Contact";
+import ContactSignalConsoleLocalizedV1 from "../contact-v2/ContactSignalConsoleLocalizedV1";
+import EducationLocalizedV1 from "../EducationLocalizedV1";
+import ExperienceOrbitalLocalizedV1 from "../experience-v2/ExperienceOrbitalLocalizedV1";
+// Home before the Projects action is preserved:
+// import Hero from "../Hero";
+// Previous Full-stack developer wording preserved in HomeProjectsV2:
+// import HomeProjectsV2 from "../HomeProjectsV2";
+// Previous plain degree line preserved in HomeProjectsV3:
+// import HomeProjectsV3 from "../HomeProjectsV3";
+import HomeLocalizedV1 from "../HomeLocalizedV1";
+// Legacy Projects section preserved before the Ivory Command V2 replacement:
+// import Works from "../Works";
+import WorksLocalizedV1 from "../projects-v2/WorksLocalizedV1";
+
+// Classic navbar preserved as the fallback before the Portfolio 26-8 Docking Rail:
+// import JourneyNavbarClassicV2 from "./JourneyNavbarClassicV2";
+import JourneyNavbarLocalizedV1 from "./JourneyNavbarLocalizedV1";
+import SpaceJourneyCanvasCopiedWarpV2 from "./SpaceJourneyCanvasCopiedWarpV2";
+
+import "./PortfolioJourneyV2.css";
+import "./PortfolioJourneyNeutralV2.css";
+import "./PortfolioJourneyTuningV2.css";
+import "./PortfolioJourneyFlightV2.css";
+import "./PortfolioJourneyPolarPrismV2.css";
+import "./PortfolioJourneyNavigationCorrectionV2.css";
+import "./PortfolioJourneyOriginalStarsV2.css";
+import "./PortfolioJourneyBlackNavbarV2.css";
+import "../../i18n/PortfolioLocaleV1.css";
+import "../../i18n/ArabicTypographyIBMV1.css";
+
+const DESTINATIONS = [
+  {
+    id: "hero",
+    label: "Home",
+    station: "Home orbit",
+  },
+  /*
+  About destination preserved but temporarily disabled:
+  {
+    id: "about",
+    label: "About",
+    station: "Personal signal",
+  },
+  */
+  {
+    id: "education",
+    label: "Education",
+    station: "Eclipse station",
+  },
+  {
+    id: "experience",
+    label: "Experience",
+    station: "IEI work orbit",
+  },
+  {
+    id: "projects",
+    label: "Projects",
+    station: "Project systems",
+  },
+  {
+    id: "contact",
+    label: "Contact",
+    station: "Signal console",
+  },
+];
+
+const getDestinationFromHash = () => {
+  const hash = window.location.hash.replace("#", "").toLowerCase();
+  return DESTINATIONS.some((destination) => destination.id === hash)
+    ? hash
+    : "hero";
+};
+
+const PortfolioJourneyLocalizedV1 = () => {
+  const { locale, t } = usePortfolioLocaleV1();
+  const destinations = useMemo(() => DESTINATIONS.map((item) => ({ ...item, label: t(`nav.${item.id === "hero" ? "home" : item.id}`) })), [t]);
+  const prefersReducedMotion = useReducedMotion();
+  const initialDestination = useMemo(getDestinationFromHash, []);
+  const [activeDestinationId, setActiveDestinationId] =
+    useState(initialDestination);
+  const [targetDestinationId, setTargetDestinationId] = useState(null);
+  const [isTraveling, setIsTraveling] = useState(false);
+  const [travelDirection, setTravelDirection] = useState(1);
+
+  const activeDestinationRef = useRef(initialDestination);
+  const isTravelingRef = useRef(false);
+  const travelTimerRef = useRef();
+  const scrollPositionsRef = useRef({});
+
+  const activeDestination = destinations.find(
+    (destination) => destination.id === activeDestinationId,
+  );
+  const targetDestination = destinations.find(
+    (destination) => destination.id === targetDestinationId,
+  );
+
+  const travelTo = useCallback(
+    (destinationId, options = {}) => {
+      const destinationIndex = DESTINATIONS.findIndex(
+        (destination) => destination.id === destinationId,
+      );
+      const activeIndex = DESTINATIONS.findIndex(
+        (destination) => destination.id === activeDestinationRef.current,
+      );
+
+      if (
+        destinationIndex === -1 ||
+        destinationId === activeDestinationRef.current ||
+        isTravelingRef.current
+      ) {
+        return;
+      }
+
+      scrollPositionsRef.current[activeDestinationRef.current] = window.scrollY;
+      isTravelingRef.current = true;
+      setIsTraveling(true);
+      setTargetDestinationId(destinationId);
+      setTravelDirection(destinationIndex >= activeIndex ? 1 : -1);
+
+      const compactScreen = window.matchMedia("(max-width: 639px)").matches;
+      const duration = prefersReducedMotion ? 0 : compactScreen ? 620 : 920;
+
+      window.clearTimeout(travelTimerRef.current);
+      travelTimerRef.current = window.setTimeout(() => {
+        activeDestinationRef.current = destinationId;
+        setActiveDestinationId(destinationId);
+
+        if (options.historyMode !== "none") {
+          window.history.pushState(
+            { destination: destinationId },
+            "",
+            `#${destinationId}`,
+          );
+        }
+
+        window.requestAnimationFrame(() => {
+          const previousScrollBehavior =
+            document.documentElement.style.scrollBehavior;
+          document.documentElement.style.scrollBehavior = "auto";
+          window.scrollTo(0, scrollPositionsRef.current[destinationId] || 0);
+
+          window.requestAnimationFrame(() => {
+            document.documentElement.style.scrollBehavior =
+              previousScrollBehavior;
+            isTravelingRef.current = false;
+            setIsTraveling(false);
+            setTargetDestinationId(null);
+          });
+        });
+      }, duration);
+    },
+    [prefersReducedMotion],
+  );
+
+  useEffect(() => {
+    const currentHash = `#${initialDestination}`;
+    if (window.location.hash.toLowerCase() !== currentHash) {
+      window.history.replaceState(
+        { destination: initialDestination },
+        "",
+        currentHash,
+      );
+    } else {
+      window.history.replaceState(
+        { destination: initialDestination },
+        "",
+        window.location.href,
+      );
+    }
+
+    const previousRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
+
+    return () => {
+      window.history.scrollRestoration = previousRestoration;
+    };
+  }, [initialDestination]);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const destinationId = getDestinationFromHash();
+
+      if (isTravelingRef.current) {
+        window.clearTimeout(travelTimerRef.current);
+        isTravelingRef.current = false;
+        activeDestinationRef.current = destinationId;
+        setActiveDestinationId(destinationId);
+        setTargetDestinationId(null);
+        setIsTraveling(false);
+        window.scrollTo(0, scrollPositionsRef.current[destinationId] || 0);
+        return;
+      }
+
+      travelTo(destinationId, { historyMode: "none" });
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [travelTo]);
+
+  useEffect(() => {
+    if (!isTraveling) {
+      return undefined;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isTraveling]);
+
+  useEffect(
+    () => () => {
+      window.clearTimeout(travelTimerRef.current);
+    },
+    [],
+  );
+
+  const renderDestination = () => {
+    switch (activeDestinationId) {
+      /*
+      About render preserved but temporarily disabled:
+      case "about":
+        return <About />;
+      */
+      case "education":
+        return <EducationLocalizedV1 />;
+      case "experience":
+        return <ExperienceOrbitalLocalizedV1 />;
+      case "projects":
+        // Legacy Projects render preserved: return <Works />;
+        return <WorksLocalizedV1 />;
+      case "contact":
+        // Legacy Contact render preserved: return <Contact />;
+        return <ContactSignalConsoleLocalizedV1 />;
+      case "hero":
+      default:
+        // Previous Home render preserved: return <Hero />;
+        return <HomeLocalizedV1 />;
+    }
+  };
+
+  // Legacy chapter-control calculations preserved for the disabled footer:
+  // const activeIndex = DESTINATIONS.findIndex(
+  //   (destination) => destination.id === activeDestinationId,
+  // );
+  // const previousDestination = DESTINATIONS[activeIndex - 1];
+  // const nextDestination = DESTINATIONS[activeIndex + 1];
+
+  const handleChapterNavigation = (event) => {
+    const destinationLink = event.target.closest?.('a[href^="#"]');
+    const destinationId = destinationLink
+      ?.getAttribute("href")
+      ?.replace("#", "")
+      .toLowerCase();
+
+    if (DESTINATIONS.some((destination) => destination.id === destinationId)) {
+      event.preventDefault();
+      travelTo(destinationId);
+    }
+  };
+
+  return (
+    <div
+      className="portfolio-journey-v2 portfolio-localized-v1"
+      data-locale={locale}
+      data-destination={activeDestinationId}
+    >
+      <SpaceJourneyCanvasCopiedWarpV2
+        direction={travelDirection}
+        isTraveling={isTraveling}
+        reducedMotion={prefersReducedMotion}
+      />
+
+      <div className="portfolio-journey-v2__space-wash" aria-hidden="true" />
+
+      <JourneyNavbarLocalizedV1
+        activeDestination={activeDestination}
+        destinations={destinations}
+        isTraveling={isTraveling}
+        onTravel={travelTo}
+        targetDestination={targetDestination}
+      />
+
+      <main
+        className={`portfolio-journey-v2__content ${
+          isTraveling ? "is-departing" : ""
+        }`}
+        aria-label={t("nav.destination", { destination: activeDestination.label })}
+        onClick={handleChapterNavigation}
+      >
+        <div className="portfolio-journey-v2__chapter">
+          {renderDestination()}
+        </div>
+
+        {/*
+          {activeDestinationId !== "hero" && (
+          <footer className="journey-v2__chapter-controls">
+            {previousDestination ? (
+              <button
+                type="button"
+                className="journey-v2__secondary-action"
+                onClick={() => travelTo(previousDestination.id)}
+              >
+                <span aria-hidden="true">←</span>
+                {previousDestination.label}
+              </button>
+            ) : (
+              <span />
+            )}
+
+            <div>
+              <small>Current destination</small>
+              <strong>{activeDestination.label}</strong>
+            </div>
+
+            <button
+              type="button"
+              className="journey-v2__primary-action"
+              onClick={() =>
+                travelTo(nextDestination?.id || DESTINATIONS[0].id)
+              }
+            >
+              {nextDestination
+                ? `Travel to ${nextDestination.label}`
+                : "Return to Home"}
+              <span aria-hidden="true">→</span>
+            </button>
+          </footer>
+          )}
+        */}
+      </main>
+
+      <div
+        className={`journey-transition-v2 ${
+          isTraveling ? "is-visible" : ""
+        }`}
+        aria-hidden={!isTraveling}
+      >
+        <div className="journey-transition-v2__tunnel" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </div>
+        {/*
+          Previous plain travel label preserved but disabled:
+          <p>{t("nav.travelLabel")}</p>
+          <h2>{targetDestination?.label}</h2>
+          <span>{targetDestination?.station}</span>
+        */}
+        <div className="journey-transition-v2__orbital-seal">
+          <span className="journey-transition-v2__orbital-ring" />
+          <span className="journey-transition-v2__orbital-ring journey-transition-v2__orbital-ring--secondary" />
+          <span className="journey-transition-v2__orbital-dot" />
+          <div className="journey-transition-v2__orbital-copy">
+            <p>{t("nav.travelLabel")}</p>
+            <h2>{targetDestination?.label}</h2>
+          </div>
+        </div>
+      </div>
+
+      <p className="journey-v2__live-region" aria-live="polite">
+        {isTraveling && targetDestination
+          ? t("nav.traveling", { destination: targetDestination.label })
+          : t("nav.docked", { destination: activeDestination.label })}
+      </p>
+    </div>
+  );
+};
+
+export default PortfolioJourneyLocalizedV1;
