@@ -10,7 +10,11 @@ import EducationV2 from "../EducationV2";
 import ExperienceOrbitalV2 from "../experience-v2/ExperienceOrbitalV2";
 // Home before the Projects action is preserved:
 // import Hero from "../Hero";
-import HomeProjectsV2 from "../HomeProjectsV2";
+// Previous Full-stack developer wording preserved in HomeProjectsV2:
+// import HomeProjectsV2 from "../HomeProjectsV2";
+// Previous plain degree line preserved in HomeProjectsV3:
+// import HomeProjectsV3 from "../HomeProjectsV3";
+import HomeProjectsV4 from "../HomeProjectsV4";
 // Legacy Projects section preserved before the Ivory Command V2 replacement:
 // import Works from "../Works";
 import WorksIvoryCommandV2 from "../projects-v2/WorksIvoryCommandV2";
@@ -237,7 +241,7 @@ const PortfolioJourneyV2 = () => {
       case "hero":
       default:
         // Previous Home render preserved: return <Hero />;
-        return <HomeProjectsV2 />;
+        return <HomeProjectsV4 />;
     }
   };
 
