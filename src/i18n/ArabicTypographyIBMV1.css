@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+
+/* Approved Arabic typeface. English typography and legacy files stay unchanged. */
+:root[lang="ar"] .portfolio-localized-v1,
+:root[lang="ar"] .portfolio-localized-v1 *,
+:root[lang="ar"] .portfolio-localized-modal-v1,
+:root[lang="ar"] .portfolio-localized-modal-v1 *,
+.portfolio-language-switch-v1 span[lang="ar"] {
+  font-family: "IBM Plex Sans Arabic", Tahoma, "Segoe UI", Arial, sans-serif;
+}

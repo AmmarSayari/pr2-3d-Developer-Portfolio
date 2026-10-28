@@ -1,0 +1,195 @@
+/* Additive locale layer. Original portfolio styling and component files stay intact. */
+.portfolio-language-switch-v1 {
+  display: inline-flex;
+  min-width: 48px;
+  min-height: 44px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(244, 241, 222, 0.25);
+  border-radius: 12px;
+  color: #f4f1de;
+  background: rgba(0, 0, 0, 0.52);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.portfolio-language-switch-v1 span[lang="ar"] {
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+.portfolio-language-switch-v1:hover:not(:disabled),
+.portfolio-language-switch-v1:focus-visible {
+  border-color: #1ebbd7;
+  outline: 2px solid rgba(30, 187, 215, 0.45);
+  outline-offset: 3px;
+  background: rgba(30, 187, 215, 0.12);
+}
+
+.portfolio-language-switch-v1:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.portfolio-mobile-top-controls-v1,
+.portfolio-modal-actions-v1 {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.portfolio-modal-actions-v1 {
+  flex: 0 0 auto;
+}
+
+.portfolio-localized-v1 bdi,
+.portfolio-localized-modal-v1 bdi {
+  font: inherit;
+}
+
+:root[lang="ar"] .portfolio-localized-v1,
+:root[lang="ar"] .portfolio-localized-v1 *,
+:root[lang="ar"] .portfolio-localized-modal-v1,
+:root[lang="ar"] .portfolio-localized-modal-v1 * {
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0 !important;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1,
+:root[dir="rtl"] .portfolio-localized-modal-v1 {
+  text-align: start;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 h2,
+:root[dir="rtl"] .portfolio-localized-v1 h3,
+:root[dir="rtl"] .portfolio-localized-modal-v1 h3 {
+  line-height: 1.4;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 .journey-docking-navbar-v2 > nav:first-child {
+  left: auto !important;
+  right: max(64px, calc((100vw - 1280px) / 2 + 64px)) !important;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 .journey-station-v2__location {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 .journey-station-v2__mobile-stop,
+:root[dir="rtl"] .portfolio-localized-v1 .journey-topbar-v2__mobile-toggle {
+  text-align: right;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 .journey-station-v2__mobile-route::before {
+  left: auto;
+  right: 22px;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 .localized-home-v1__tech-label {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 .localized-home-v1__tech-divider {
+  margin-left: 0;
+  margin-right: 0.75rem;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 .experience-orbital-v2__meta {
+  text-align: left;
+}
+
+.portfolio-localized-v1 .education-v2__meta bdi {
+  white-space: nowrap;
+}
+
+:root[dir="rtl"] .portfolio-localized-modal-v1 .experience-orbital-v2__story-copy section {
+  padding-left: 0;
+  padding-right: 4px;
+}
+
+:root[dir="rtl"] .portfolio-localized-modal-v1 .experience-orbital-v2__archive-grid.is-open {
+  padding-right: 0;
+  padding-left: 0.35rem;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 .projects-ivory-v2__stack > div > span {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 .projects-ivory-v2__project::before {
+  background: linear-gradient(270deg, var(--projects-cyan), transparent);
+}
+
+:root[dir="rtl"] .portfolio-localized-v1 .projects-ivory-v4__progress > span {
+  transform-origin: right center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root[dir="rtl"] .portfolio-localized-v1 .projects-ivory-v3__image--forward {
+    animation-name: projects-ivory-v3-slide-backward;
+  }
+
+  :root[dir="rtl"] .portfolio-localized-v1 .projects-ivory-v3__image--backward {
+    animation-name: projects-ivory-v3-slide-forward;
+  }
+}
+
+/* Text flows RTL; canvas, screenshots, portrait and orbit coordinates are never flipped. */
+@media (max-width: 767px) {
+  :root[dir="rtl"] .portfolio-localized-v1 .experience-orbital-v2__meta {
+    text-align: right;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-localized-v1 .journey-docking-navbar-v2 > nav:first-child.is-mobile-open .journey-topbar-v2__mobile-toggle {
+    min-width: 0;
+    flex: 1 1 auto;
+    grid-template-columns: 32px minmax(0, 1fr) 22px;
+    gap: 0.4rem;
+  }
+
+  .portfolio-localized-v1 .is-mobile-open .journey-topbar-v2__mobile-toggle > span {
+    font-size: 0.8rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .portfolio-localized-v1 .is-mobile-open .journey-topbar-v2__mobile-toggle img {
+    width: 32px;
+  }
+
+  :root[dir="rtl"] .portfolio-localized-v1 .journey-docking-navbar-v2 > nav:first-child {
+    left: auto !important;
+    right: max(8px, env(safe-area-inset-right)) !important;
+  }
+
+  .portfolio-localized-modal-v1 .experience-orbital-v2__dialog-header {
+    flex-wrap: wrap;
+  }
+
+  .portfolio-modal-actions-v1 {
+    margin-inline-start: auto;
+  }
+}
+
+@media (max-width: 639.98px) {
+  /* Four icon rows on narrow phones must contribute their real height. */
+  .portfolio-localized-v1 .localized-home-v1__tech-row {
+    height: auto;
+    min-height: 160px;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-language-switch-v1 { transition: none; }
+}
