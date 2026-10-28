@@ -13,12 +13,18 @@ import {
 import EducationV2 from "./components/EducationV2";
 */
 
-import PortfolioJourneyV2 from "./components/journey/PortfolioJourneyV2";
+// English-only journey preserved intact for rollback:
+// import PortfolioJourneyV2 from "./components/journey/PortfolioJourneyV2";
+import PortfolioJourneyLocalizedV1 from "./components/journey/PortfolioJourneyLocalizedV1";
+import { PortfolioLocaleProviderV1 } from "./i18n/PortfolioLocaleProviderV1";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <PortfolioJourneyV2 />
+      {/* Previous entry point preserved: <PortfolioJourneyV2 /> */}
+      <PortfolioLocaleProviderV1>
+        <PortfolioJourneyLocalizedV1 />
+      </PortfolioLocaleProviderV1>
 
       {/*
       Legacy Portfolio 26-8 layout preserved for rollback:
