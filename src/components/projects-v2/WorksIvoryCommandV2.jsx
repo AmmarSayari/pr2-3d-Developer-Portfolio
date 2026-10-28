@@ -5,22 +5,28 @@ import { SectionWrapper } from "../../hoc";
 // import ProjectPartCardIvoryV2 from "./ProjectPartCardIvoryV2";
 // ProjectPartCardIvoryV3 remains available without the timed progress bar.
 // import ProjectPartCardIvoryV3 from "./ProjectPartCardIvoryV3";
-import ProjectPartCardIvoryV4 from "./ProjectPartCardIvoryV4";
+// V4 remains intact with its optional paragraph above the image slider.
+// import ProjectPartCardIvoryV4 from "./ProjectPartCardIvoryV4";
+import ProjectPartCardIvoryV5 from "./ProjectPartCardIvoryV5";
 import SawlahShowcaseV1 from "./SawlahShowcaseV1";
-import legacyPortfolioProjectV2 from "./legacyPortfolioProjectV2";
+// Previous Original Portfolio description preserved in V2:
+// import legacyPortfolioProjectV2 from "./legacyPortfolioProjectV2";
+import legacyPortfolioProjectV3 from "./legacyPortfolioProjectV3";
 // The previous four full Sawlah cards remain in sawlahProjectV2.
 // import sawlahProjectV2 from "./sawlahProjectV2";
 import sawlahProjectV3 from "./sawlahProjectV3";
 import ballotProjectV1 from "./ballotProjectV1";
-import malafaTechProjectV1 from "./malafaTechProjectV1";
+// Previous MalafaTech introduction preserved in V1:
+// import malafaTechProjectV1 from "./malafaTechProjectV1";
+import malafaTechProjectV2 from "./malafaTechProjectV2";
 import "./WorksIvoryCommandV2.css";
 
 // Keep the original project records intact and add new work separately.
 const activeProjects = [
-  malafaTechProjectV1,
+  malafaTechProjectV2,
   sawlahProjectV3,
   ballotProjectV1,
-  legacyPortfolioProjectV2,
+  legacyPortfolioProjectV3,
   ...projects2,
 ];
 
@@ -41,10 +47,13 @@ const WorksIvoryCommandV2 = () => {
           ability to solve complex problems, work with different technologies,
           frameworks, and libraries, and manage projects effectively.
         */}
-        <p className="projects-ivory-v2__section-intro">
-          A selection of projects I&apos;ve built across web, mobile, and
-          interactive experiences, each exploring a different idea or challenge.
-        </p>
+        {/*
+          Section introduction hidden during the Projects text review:
+          <p className="projects-ivory-v2__section-intro">
+            A selection of projects I&apos;ve built across web, mobile, and
+            interactive experiences, each exploring a different idea or challenge.
+          </p>
+        */}
       </header>
 
       <div className="projects-ivory-v2__projects">
@@ -87,7 +96,7 @@ const WorksIvoryCommandV2 = () => {
                   The first V2 pass also supplied a decorative partIndex prop.
                 */}
                 {project.apps.map((app) => (
-                  <ProjectPartCardIvoryV4
+                  <ProjectPartCardIvoryV5
                     app={app}
                     key={`${project.name}-${app.name}`}
                     projectName={project.name}
